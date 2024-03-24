@@ -1,18 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "description": "§lTEARS OF THEMIS PACK: MEMBERSHIP ONLY | THEMED: SWEETHEART'S GIFT \nYoutube: @eikirohichireal \n discord: zuoranartemwing", 
-        "name": "§lTears Of Themis Pack: §4Sweetheart's gift",
-        "uuid": "4642fd8c-83d3-4eb3-8c59-76c509355ef8",
-        "version": [14, 1, 0],
+        "description": "Created by Fyrex",
+        "name": "§lNeko§bUI v15.1 LITE - TEST",
+        "uuid": "7ca05144-90ef-499a-ad51-470790d0bb29",
+        "version": [15, 1, 0],
         "min_engine_version": [1, 20, 31]
     },
     "modules": [
         {
-            "description": "§lREWORKED FROM NEKO UI \nOriginal By: @zxyn404 ( Han's )",
+            "description": "Created by Fyrex",
             "type": "resources",
-            "uuid": "24961140-70e4-4d03-8f3c-c7770741a9cc",
-            "version": [14, 1, 0]
+            "uuid": "62680820-b482-439f-a14a-dd1302d5bee2",
+            "version": [15, 1, 0]
         }
     ]
 }
