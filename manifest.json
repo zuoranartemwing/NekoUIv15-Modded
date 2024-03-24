@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§lTEARS OF THEMIS PACK: MEMBERSHIP ONLY | THEMED: SWEETHEART'S GIFT \nYoutube: @eikirohichireal \n discord: zuoranartemwing", 
+        "name": "§lTears Of Themis Pack: §4Sweetheart's gift",
+        "uuid": "4642fd8c-83d3-4eb3-8c59-76c509355ef8",
+        "version": [14, 1, 0],
+        "min_engine_version": [1, 20, 31]
+    },
+    "modules": [
+        {
+            "description": "§lREWORKED FROM NEKO UI \nOriginal By: @zxyn404 ( Han's )",
+            "type": "resources",
+            "uuid": "24961140-70e4-4d03-8f3c-c7770741a9cc",
+            "version": [14, 1, 0]
+        }
+    ]
+}
