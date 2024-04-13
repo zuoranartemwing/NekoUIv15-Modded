@@ -1,0 +1,98 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "controls_section",
+
+  // Keyboard and Mouse button & section
+
+  "keyboard_and_mouse_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/keyboard_and_mouse_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/keyboard_and_mouse_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.keyboardAndMouse",
+    "$toggle_property_bag": {
+      "#panel_title": "options.keyboardAndMouseSettings"
+    }
+  },
+
+  "keyboard_and_mouse_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.keyboard_and_mouse.text",
+              "$icon": "keyboard_and_mouse_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  // Controller button & section
+
+  "controller_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "controller_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/controller_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/controller_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.controller",
+    "$toggle_property_bag": {
+      "#panel_title": "options.controllerSettings"
+    }
+  },
+
+  "controller_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.controller.text",
+              "$icon": "controller_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  // Touch button & section
+
+  "touch_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "touch_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/touch_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/touch_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.touch",
+    "$toggle_property_bag": {
+      "#panel_title": "options.touchSettings"
+    }
+  },
+
+  "touch_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.touch.text",
+              "$icon": "touch_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

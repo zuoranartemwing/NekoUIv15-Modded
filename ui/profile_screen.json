@@ -1,0 +1,180 @@
+  // CUSTOM KODE DIBUAT OLEH ZXYN 
+  // DILARANG MENGGUNAKAN KODE INI TANPA IZIN !
+  // (c) ZxynUI
+
+{
+  "namespace": "profile",
+
+  "preset_arrow_button@common_buttons.light_content_button": {
+    "size": [ "100%", "100%x" ],
+    "$focus_id": "$arrow_button_focus_id",
+    "$hover_button_texture": "textures/ui/button_borderless_light",
+    "$focus_override_left": "$arrow_button_focus_override_left",
+    "$focus_override_right": "$arrow_button_focus_override_right",
+    "$button_content": "profile.profile_button_image_content",
+    "$texture_color": "$dressing_room_dark_button_color",
+    "$button_image_content_size": [ 15, 15 ],
+    "$profile_button_image|default": "textures/ui/chevron_left",
+    "$pressed_button_name|default": "button.pressedArrowLeft",
+    "$enabled_binding_Name|default": "#arrow_left_enabled",
+    "$is_arrow_right|default": false,
+    "variables": [
+      {
+        "requires": "$is_arrow_right",
+        "$pressed_button_name": "button.pressedArrowRight",
+        "$profile_button_image": "textures/ui/chevron_right",
+        "$enabled_binding_Name": "#arrow_right_enabled"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$enabled_binding_Name",
+        "binding_name_override": "#enabled",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "lower_button_label_section@common.vertical_stack_panel": {
+    "size": [ "100%", "100%c" ],
+    "layer": "$always_show_layer",
+    "focus_container": true,
+    "use_last_focus": false,
+    "focus_wrap_enabled": false,
+    "focus_navigation_mode_right": "stop",
+    "focus_navigation_mode_left": "$main_content_focus_container_left",
+    "focus_container_custom_left": "$main_content_focus_container_left_custom",
+    "controls": [
+      { "lower_button_section@profile.lower_button_section": {} }
+    ]
+  },
+
+  "lower_button_section@common.horizontal_stack_panel": {
+    "size": [ "100%", 22 ],
+    "focus_container": true,
+    "focus_wrap_enabled": false,
+    "focus_navigation_mode_left": "$main_content_focus_container_left",
+    "focus_container_custom_left": "$main_content_focus_container_left_custom",
+    "controls": [
+      { "left_padding@profile.buttons_sides_padding_panel": {} },
+      { "differences_info_button@profile.differences_information_button": {} },
+      { "spacing_1@common.empty_panel": { "size": [ 3, "100%" ] } },
+      { "edit_button@profile.edit_appearance_button_panel": {} },
+      { "spacing_2@common.empty_panel": { "size": [ 3, "100%" ] } },
+      { "delete_button@profile.delete_appearance_button": {} },
+      { "spacing_3@common.empty_panel": { "size": [ 3, "100%" ] } },
+      { "right_padding@profile.buttons_sides_padding_panel": {} }
+    ]
+  },
+  
+  "profile_screen_main_content@common.vertical_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "where":  { "featured_section@profile.bottom_panel_framework": {} }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value":  { "spacer": { "type": "panel", "size": [ "100%", 15 ]} }
+      }
+    ]
+  },
+
+  "profile_screen_content@neko_c.bg_2": {
+    "alpha": 0.55,
+   // "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$ignore_home_button": true,
+    "$ignore_search": true,
+    "$sidebar_ignore_page_loading": true,
+    "controls": [
+      {
+        "main_panel@common_store.store_header_with_coins": {
+          "$screen_header_title_binding_type": "global",
+          "$child_control": "profile.profile_screen_main_panel",
+          "$back_button_pressed_button_name": "button.try_exiting"
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "no_store_connection": "@common_store.popup_dialog__no_store_connection",
+            "restore_popup": "@common_store.popup_dialog__restore_popup",
+            "restore_failed": "@common_store.popup_dialog__restore_failed",
+            "toast_message": "@profile.popup_toast",
+            "difference_information": "@profile.popup_dialog__difference_information",
+            "difference_preview": "@profile.popup_dialog__preview_difference_information",
+            "delete_persona": "@profile.popup_dialog__delete_persona",
+            "create_persona": "@profile.popup_dialog__create_persona",
+            "cast_character_select_popup": "@persona_cast_character_screen.popup_dialog__cast_character_select",
+            "cast_character_preview": "@persona_cast_character_screen.popup_dialog__cast_character_preview"
+          }
+        }
+      }
+    ]
+  },
+
+  "profile_screen_background_content": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/profile_bg" 
+  },
+  
+  "render_below_base_screen@common.base_screen": { "force_render_below": true },
+
+
+  "profile_screen@common.base_screen": {
+    "$safezone_screen_matrix_layer": 20,
+    "$ignore_inventory_button": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel", // controller_B
+        "to_button_id": "button.try_exiting",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left", // controller_left_bumper
+        "to_button_id": "button.pressedArrowLeft",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_right", // controller_right_bumper
+        "to_button_id": "button.pressedArrowRight",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_select", // controller_X
+        "to_button_id": "button.coin_wallet",
+        "mapping_type": "global"
+      }
+    ],
+
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+
+    "$default_text_color": "$light_button_default_text_color",
+
+    "$fill_alpha": 0.2,
+    "$screen_content": "profile.profile_screen_content",
+    "$header_safezone_control": "",
+    "$header_bar_control": "",
+    "$is_full_screen_layout": true,
+    "$ignore_home_button": true,
+    "$ignore_search": true,
+    "$sidebar_ignore_page_loading": true,
+    "$screen_bg_content": "bg_animations.nomoreanim",
+
+    "$always_show_layer": 200,
+    "$always_show_paper_doll": 190,
+    "$manage_options_background": 100,
+    "$preset_appearance_front_layer": 6,
+    "$preset_appearance_back_layer": 5
+  }
+}

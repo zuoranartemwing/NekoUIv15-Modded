@@ -1,0 +1,31 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "stonecutter",
+
+  "screen_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tombol_extra@crafting.tombol_extra": { 
+          "$enable_drop_one": true, 
+          "$enable_drop_one_stack": true,
+          "$enable_normal_inventory": true, 
+          "$enable_destroy_item": false, 
+          "$enable_quick_loot_smithing": false, 
+          "$enable_quick_loot": false,
+          "$enable_quick_crafting": false,
+          "$enable_quick_loot_furnace": false,
+          "$enable_quick_loot_anvil": false 
+          }
+        }
+      }
+    ]
+  }
+}
+
+// #endregion

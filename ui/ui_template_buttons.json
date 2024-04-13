@@ -1,0 +1,277 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "common_buttons",
+
+  "neko_neko": {
+    "type": "image",
+    "texture": "$neko_texture",
+    "offset": "$neko_image_offset",
+    "color": "$warna_neko",
+    "size": "$ukuran_neko",
+    "anchor_from": "$neko_image_anchor",
+    "anchor_to": "$neko_image_anchor",
+    "$button_image_bindings|default": [],
+    "bindings": "$button_image_bindings"
+  },
+
+  "yuru_camp": {
+    "layer": 1,
+    "type": "panel",
+    "visible": "$use_neko_panel",
+    "$use_neko_panel|defaualt": true,
+    "$neko": "common_buttons.neko_neko",
+    "size": [ "100%", "20px" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$neko_image_anchor|default": "bottom_middle",
+    "$ukuran_neko|default": [ "100%", "100%" ],
+    "$neko_image_offset|default":  [ 0, 0],
+
+    "controls": [
+      {
+        "neko_neko@$neko": {}
+      }
+    ]
+  },
+
+
+
+  "neko_button_image": {
+    "type": "image",
+    "layer": 1,
+    "texture": "$new_ui_button_texture",
+    "$button_alpha|default": "$content_alpha",
+    "alpha": "$button_alpha",
+    "$button_image_bindings|default": [],
+    "bindings": "$button_image_bindings"
+  },
+
+  "neko_new_ui_button_panel": {
+    "type": "panel",
+    "$button_alpha|default": 1,
+    "layer": 1,
+    "$button_size_override|default": [ "100%", "100%" ],
+    "size": "$button_size_override",
+    "$content_alpha|default": 1,
+    "$neko_button_image|default": "common_buttons.neko_button_image",
+    "$button_image_visible|default": true,
+    "$button_image_size|default": [ "100% - 2px", "100% - 2px" ],
+
+    ////
+    "$ukuran_neko|default": [ "100% - 2px", "30px" ],
+    "$neko_image_anchor|default": "bottom_middle",
+    "$neko_image_offset|default": [ 0, 0 ],
+
+    "$image_anchor|default": "center",
+    "$image_offset|default": [ 0, 0 ],
+    "$border_visible|default": true,
+    "$border_alpha|default": 1,
+    "$button_anchor_to|default": "center",
+    "$button_anchor_from|default": "center",
+    "anchor_to": "$button_anchor_to",
+    "anchor_from": "$button_anchor_from",
+    "$button_image_fill|default": false,
+    "$button_image_color|default": [ 1.0, 1.0, 1.0 ],
+    "controls": [
+      {
+        "$neko_button_image@$neko_button_image": {
+          "ignored": "(not $button_image_visible)",
+          "size": "$button_image_size",
+          "offset": "$image_offset",
+          "anchor_from": "$image_anchor",
+          "anchor_to": "$image_anchor",
+          "layer": 1,
+          "fill": "$button_image_fill",
+          "color": "$button_image_color"
+        }
+      },
+      {
+        "button_content": {
+          "type": "panel",
+          "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+          "size": "$button_content_size",
+
+          "controls": [
+            {
+              "$button_type_panel@$button_type_panel": {
+                "layer": 50
+              }
+            }
+          ]
+        }
+      },
+      {
+        "border@common_buttons.focus_border": {
+          "color": "$border_color",
+          "layer": "$border_layer",
+          "alpha": "$border_alpha",
+          "ignored": "(not $border_visible)"
+        }
+      }
+    ]
+  },
+
+  "neko_button_panel": {
+    "type": "label",
+    "layer": 50,
+    "text": "$button_text",
+    "color": "$text_color",
+    "font_type": "MinecraftTen",
+    "font_size": "$button_font_size",
+    "$button_font_scale_factor|default": 0.75,
+    "font_scale_factor": "$button_font_scale_factor",
+    "$button_font_size|default": "normal",
+    "$new_ui_label_offset|default": "$button_offset",
+    "offset": "$new_ui_label_offset",
+    "$anchor|default": "bottom_middle",
+    "anchor_from": "$anchor",
+    "anchor_to": "$anchor",
+    "shadow": false,
+    "$button_text_size|default": [ "default", "default" ],
+    "size": "$button_text_size",
+    "$button_text_max_size|default": [ "100%", 10 ], // Per design buttons are single line text only
+    "max_size": "$button_text_max_size",
+    "$text_alignment|default": "center",
+    "text_alignment": "$text_alignment",
+    "$tts_section_header|default": "",
+    "tts_section_header": "$tts_section_header",
+    "bindings": [
+      {
+        "binding_type": "$button_text_binding_type",
+        "binding_condition": "$button_binding_condition",
+        "binding_collection_name": "$button_text_grid_collection_name",
+        "binding_name": "$button_text",
+        "binding_name_override": "$button_text"
+      }
+    ]
+  },
+
+  "neko_button_uwu@light_button_assets": {
+    "$button_offset|default": [ 0, -4 ],
+    "$button_pressed_offset|default": [ 0, 1 ],
+    "$button_text|default": "",
+    "$button_font_size|default": "normal",
+    "$button_font_scale_factor|default": 1.0,
+    "$pressed_alpha|default": 1,
+    "$default_button_alpha|default": 1,
+    "$default_hover_alpha|default": 1,
+    "$default_pressed_alpha|default": 1,
+    "$default_button_pressed_offset|default": [ 0, 1 ],
+
+    "$ukuran_neko_x|default": [ "100% - 2px", 20 ],
+
+    "$default_text_color|default": "$light_button_default_text_color",
+    "$hover_text_color|default": "$light_button_hover_text_color",
+    "$pressed_text_color|default": "$light_button_pressed_text_color",
+    "$locked_text_color|default": "$light_button_locked_text_color",
+
+    // For text bindings
+    "$button_text_binding_type|default": "none",
+    "$button_binding_condition|default": "none",
+    "$button_text_grid_collection_name|default": "",
+
+    "$button_type_panel": "common_buttons.neko_button_panel",
+    "$button_state_panel|default": "common_buttons.neko_new_ui_button_panel",
+    "$yuru_camp|default": "common_buttons.yuru_camp",
+
+    // These states are for passing the button state to the button content - do not set these in a parent!
+    "$default_state|default": false,
+    "$hover_state|default": false,
+    "$pressed_state|default": false,
+    "$locked_state|default": false,
+
+    "controls": [
+      {
+        "default@$button_state_panel": {
+          "fill": true,
+          "$new_ui_button_texture": "$default_button_texture",
+          "$text_color": "$default_text_color",
+          "$secondary_text_color": "$light_button_secondary_default_text_color",
+          "$content_alpha": "$default_content_alpha",
+          "$border_color": "$light_border_default_color",
+          "$border_layer": 32,
+          "$default_state": true,
+          "$button_alpha": "$default_button_alpha",
+          "layer": 1
+        }
+      },
+      {
+        "hover@$button_state_panel": {
+          "$new_ui_button_texture": "$hover_button_texture",
+          "$text_color": "$hover_text_color",
+          "$secondary_text_color": "$light_button_secondary_hover_text_color",
+          "$content_alpha": 1,
+          "$border_color": "$light_border_hover_color",
+          "$border_layer": 64,
+          "$hover_state": true,
+          "$button_alpha": "$default_hover_alpha",
+          "layer": 4 // This is several layers higher than default in case two buttons share a border and that shared border needs to turn with with either button hover/press state
+        }
+      },
+      {
+        "pressed@$button_state_panel": {
+          "$new_ui_button_texture": "$pressed_button_texture",
+          "$text_color": "$pressed_text_color",
+          "$secondary_text_color": "$light_button_secondary_pressed_text_color",
+          "$button_offset|default": "$button_pressed_offset",
+          "$content_alpha": "$pressed_alpha",
+          "$border_color": "$light_border_pressed_color",
+          "$border_layer": 128,
+          "$pressed_state": true,
+          "$button_alpha": "$default_pressed_alpha",
+          "layer": 5
+        }
+      },
+      {
+        "locked@$button_state_panel": {
+          "$new_ui_button_texture": "$locked_button_texture",
+          "$text_color": "$locked_text_color",
+          "$secondary_text_color": "$light_button_secondary_locked_text_color",
+          "$content_alpha": "$locked_alpha",
+          "$border_color": "$light_border_locked_color",
+          "$button_image": "common_buttons.locked_button_image",
+          "$border_layer": 32,
+          "$locked_state": true,
+          "layer": 1
+        }
+      },
+      {
+        "neko_default@$yuru_camp": {
+          "$neko_texture": "$neko_texture_default",
+          "$button_alpha": "$default_button_alpha",
+          "$default_state": true,
+          "layer": 25
+        }
+      },
+      {
+        "neko_hover@$yuru_camp": {
+          "$neko_texture": "$neko_texture_hover",
+          "$button_alpha": "$default_hover_alpha",
+          "$ukuran_neko": "$ukuran_neko",
+          "$hover_state": true,
+          "layer": 26
+        }
+      },
+      {
+        "neko_pressed@$yuru_camp": {
+          "$neko_texture": "$neko_texture_hover",
+          "$button_alpha": "$default_pressed_alpha",
+          "$pressed_state": true,
+          "layer": 27
+        }
+      },
+      {
+        "neko_locked@$yuru_camp": {
+          "$neko_texture": "$neko_texture_locked",
+          "$button_alpha": "$default_locked_alpha",
+          "$locked_state": true,
+          "layer": 25
+        } 
+      }
+    ]
+  }
+}

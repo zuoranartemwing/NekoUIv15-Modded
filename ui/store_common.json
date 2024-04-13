@@ -1,0 +1,105 @@
+{
+  "namespace": "common_store",
+
+  "store_header_with_coins": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "$store_header_size|default": [ "100%", 30 ],
+    "$is_inventory_screen|default": false,
+    "$ignore_home_button|default": false,
+    "$ignore_inventory_button|default": false,
+    "$ignore_search|default": false,
+    "controls": [
+      {
+        "top_bar": {
+          "type": "panel",
+          "size": "$store_header_size",
+          "focus_container": true,
+          "use_last_focus": false,
+          "focus_wrap_enabled": false,
+          "focus_nagivation_mode_up": "stop",
+          "controls": [
+            {
+              "title_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100%", 30 ],
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "padding1": {
+                      "type": "panel",
+                      "size": [ 2, "100%" ]
+                    }
+                  },
+                  {
+                    "a": { "type": "panel", "size": [ 65, "100%" ], "controls": [ { "common_back_button@neko_c.common_back_button": {}}]}
+                  },
+                  {
+                    "b": { "type": "panel", "size": [ 80, "100%" ], "ignored": "($is_on_3p_server or $ignore_search)", "controls": [ { "market_search_button@neko_c.market_search_button": {}}]}
+                  },
+                  {
+                    "padding3": {
+                      "type": "panel",
+                      "size": [ "fill", "100%" ]
+                    }
+                  },
+                  {
+                    "status_and_coins@common_store.status_with_coins": {
+                      "ignored": "$store_disabled",
+                      "$top_status_and_coins_visible_binding_type|default": "none",
+                      "$top_status_and_coins_visible_binding|default": "",
+                      "bindings": [
+                        {
+                          "binding_type": "$top_status_and_coins_visible_binding_type",
+                          "binding_name": "$top_status_and_coins_visible_binding",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding5": {
+                      "type": "panel",
+                      "size": [ 2, "100%" ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "child_control@$child_control": {
+          "size": [ "100%", "fill" ],
+          "layer": 2
+        }
+      }
+    ]
+    },
+
+  "tag": {
+    "type": "image",
+    "$tag_texture|default": "textures/ui/newOffersIcon",
+    "$tag_text|default": "",
+    "texture": "$tag_texture",
+    "size": [ "100%c + 4px", 15 ],
+    "controls": [
+      {
+        "new_offer_label": {
+          "type": "label",
+          "size": [ "default", 10 ],
+          "offset": [ 0, 1 ],
+          "text": "$tag_text",
+          "color": "$new_offer_icon_text_color",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "tts_name": "accessibility.store.tag",
+          "tts_control_type_order_priority": 1002, // To be read after the button control type
+          "tts_value_order_priority": 1001
+        }
+      }
+    ]
+  }
+}

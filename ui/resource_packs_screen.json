@@ -1,0 +1,95 @@
+{
+  "namespace": "resource_packs",
+
+  "resource_packs_toggle_button_control": {
+    "type": "panel",
+    "layer": 2,
+    "controls": [
+      {
+        "icon_border@white_image": {
+          "size": [ 17, 17 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 5, 0 ],
+          "layer": 1
+        }
+      },
+      {
+        "cycling_icon": {
+          "type": "image",
+          "size": [ 15, 15 ],
+          "offset": [ 6, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "$icon_collection_name": "none",
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "$cycling_icon_path",
+              "binding_name_override": "#texture",
+              "binding_condition": "always"
+            },
+            {
+              "binding_name": "$cycling_icon_zip",
+              "binding_name_override": "#zip_folder",
+              "binding_condition": "always"
+            },
+            {
+              "binding_name": "$cycling_icon_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "font_scale_factor": 0.75,
+          "font_type": "EudoxusSans-Bold",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "max_size": [ "100% - 38px", "100%" ],
+          "offset": [ 25, 0 ],
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha"
+        }
+      }
+    ]
+  }, //menu button, no edit
+
+  "resource_packs_section_toggle_base@common_toggles.light_ui_toggle": {
+    "$light_toggle_default_text_color": "$light_toggle_default",
+    "$light_toggle_hover_text_color": "$light_toggle_hover",
+    "$light_toggle_checked_default_text_color": "$light_toggle_pressed_default",
+    "$light_toggle_checked_hover_text_color": "$light_toggle_pressed_and_hover",
+
+    "$default_texture": "",
+    "$hover_texture": "textures/neko/toggle_button/button_borderless_lighthover",
+    "$pressed_texture": "textures/neko/toggle_button/button_borderless_lightpressed",
+    "$pressed_no_hover_texture": "textures/neko/toggle_button/button_borderless_lightpressednohover",
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "30px" ],
+    "$button_size_override": [ "100%", "100% + 1px" ],
+
+    "$button_type_panel": "resource_packs.resource_packs_toggle_button_control",
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "navigation_tab",
+    "$toggle_group_default_selected": "$default_selector_toggle_index",
+
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+
+    "$toggle_tts_override_toggle_value": " ",
+    "$toggle_tts_name": "" // We don't want to say 'toggle' for section toggles
+  } //menu button, no edit
+
+}

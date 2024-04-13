@@ -1,0 +1,717 @@
+{
+  "namespace": "progress",
+
+          
+  "label_persen": {"alpha": "@zxyn.alpha_0","anchor_from": "center", "anchor_to": "center", "line_padding": 2, "font_size": "extra_large", "localize": false, "shadow": false, "layer": 3,"type": "label", "text": "$neko",
+  "bindings": [{"binding_name": "#loading_bar_percentage"},{"binding_type": "view","source_property_name": "((( #loading_bar_percentage > $persentase_min ) and ( #loading_bar_percentage < $persentase_maks )) or ( #loading_bar_percentage = $persentase_min ))","target_property_name": "#visible"}]},
+  
+  "persen_panel": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {"1@progress.label_persen": {"$neko": "100","$persentase_min": 0,"$persentase_maks": 0.020}},
+      {"2@progress.label_persen": {"$neko": "99","$persentase_min": 0.020,"$persentase_maks": 0.030}},
+      {"3@progress.label_persen": {"$neko": "98","$persentase_min": 0.030,"$persentase_maks": 0.040}},
+      {"4@progress.label_persen": {"$neko": "97","$persentase_min": 0.040,"$persentase_maks": 0.050}},
+      {"5@progress.label_persen": {"$neko": "96","$persentase_min": 0.050,"$persentase_maks": 0.060}},
+      {"6@progress.label_persen": {"$neko": "95","$persentase_min": 0.060,"$persentase_maks": 0.070}},
+      {"7@progress.label_persen": {"$neko": "94","$persentase_min": 0.070,"$persentase_maks": 0.080}},
+      {"8@progress.label_persen": {"$neko": "93","$persentase_min": 0.080,"$persentase_maks": 0.090}},
+      {"9@progress.label_persen": {"$neko": "92","$persentase_min": 0.090,"$persentase_maks": 0.100}},
+      {"10@progress.label_persen": {"$neko": "91","$persentase_min": 0.100,"$persentase_maks": 0.110}},
+      {"11@progress.label_persen": {"$neko": "90","$persentase_min": 0.110,"$persentase_maks": 0.120}},
+      {"12@progress.label_persen": {"$neko": "89","$persentase_min": 0.120,"$persentase_maks": 0.130}},
+      {"13@progress.label_persen": {"$neko": "88","$persentase_min": 0.130,"$persentase_maks": 0.140}},
+      {"14@progress.label_persen": {"$neko": "87","$persentase_min": 0.140,"$persentase_maks": 0.150}},
+      {"15@progress.label_persen": {"$neko": "86","$persentase_min": 0.150,"$persentase_maks": 0.160}},
+      {"16@progress.label_persen": {"$neko": "85","$persentase_min": 0.160,"$persentase_maks": 0.170}},
+      {"17@progress.label_persen": {"$neko": "84","$persentase_min": 0.170,"$persentase_maks": 0.180}},
+      {"18@progress.label_persen": {"$neko": "83","$persentase_min": 0.180,"$persentase_maks": 0.190}},
+      {"19@progress.label_persen": {"$neko": "82","$persentase_min": 0.190,"$persentase_maks": 0.200}},
+      {"20@progress.label_persen": {"$neko": "81","$persentase_min": 0.200,"$persentase_maks": 0.210}},
+      {"21@progress.label_persen": {"$neko": "80","$persentase_min": 0.210,"$persentase_maks": 0.220}},
+      {"22@progress.label_persen": {"$neko": "79","$persentase_min": 0.220,"$persentase_maks": 0.230}},
+      {"23@progress.label_persen": {"$neko": "78","$persentase_min": 0.230,"$persentase_maks": 0.240}},
+      {"24@progress.label_persen": {"$neko": "77","$persentase_min": 0.240,"$persentase_maks": 0.250}},
+      {"25@progress.label_persen": {"$neko": "76","$persentase_min": 0.250,"$persentase_maks": 0.260}},
+      {"26@progress.label_persen": {"$neko": "75","$persentase_min": 0.260,"$persentase_maks": 0.270}},
+      {"27@progress.label_persen": {"$neko": "74","$persentase_min": 0.270,"$persentase_maks": 0.280}},
+      {"28@progress.label_persen": {"$neko": "73","$persentase_min": 0.280,"$persentase_maks": 0.290}},
+      {"29@progress.label_persen": {"$neko": "72","$persentase_min": 0.290,"$persentase_maks": 0.300}},
+      {"31@progress.label_persen": {"$neko": "71","$persentase_min": 0.300,"$persentase_maks": 0.310}},
+      {"32@progress.label_persen": {"$neko": "70","$persentase_min": 0.310,"$persentase_maks": 0.320}},
+      {"33@progress.label_persen": {"$neko": "69","$persentase_min": 0.320,"$persentase_maks": 0.330}},
+      {"34@progress.label_persen": {"$neko": "68","$persentase_min": 0.330,"$persentase_maks": 0.340}},
+      {"35@progress.label_persen": {"$neko": "67","$persentase_min": 0.340,"$persentase_maks": 0.350}},
+      {"36@progress.label_persen": {"$neko": "66","$persentase_min": 0.350,"$persentase_maks": 0.360}},
+      {"37@progress.label_persen": {"$neko": "65","$persentase_min": 0.360,"$persentase_maks": 0.370}},
+      {"38@progress.label_persen": {"$neko": "64","$persentase_min": 0.370,"$persentase_maks": 0.380}},
+      {"39@progress.label_persen": {"$neko": "63","$persentase_min": 0.380,"$persentase_maks": 0.390}},
+      {"40@progress.label_persen": {"$neko": "62","$persentase_min": 0.390,"$persentase_maks": 0.400}},
+      {"41@progress.label_persen": {"$neko": "61","$persentase_min": 0.400,"$persentase_maks": 0.410}},
+      {"42@progress.label_persen": {"$neko": "60","$persentase_min": 0.410,"$persentase_maks": 0.420}},
+      {"43@progress.label_persen": {"$neko": "59","$persentase_min": 0.420,"$persentase_maks": 0.430}},
+      {"44@progress.label_persen": {"$neko": "58","$persentase_min": 0.430,"$persentase_maks": 0.440}},
+      {"45@progress.label_persen": {"$neko": "57","$persentase_min": 0.440,"$persentase_maks": 0.450}},
+      {"46@progress.label_persen": {"$neko": "56","$persentase_min": 0.450,"$persentase_maks": 0.460}},
+      {"47@progress.label_persen": {"$neko": "55","$persentase_min": 0.460,"$persentase_maks": 0.470}},
+      {"48@progress.label_persen": {"$neko": "54","$persentase_min": 0.470,"$persentase_maks": 0.480}},
+      {"49@progress.label_persen": {"$neko": "53","$persentase_min": 0.480,"$persentase_maks": 0.490}},
+      {"50@progress.label_persen": {"$neko": "52","$persentase_min": 0.490,"$persentase_maks": 0.500}},
+      {"51@progress.label_persen": {"$neko": "51","$persentase_min": 0.500,"$persentase_maks": 0.510}},
+      {"52@progress.label_persen": {"$neko": "50","$persentase_min": 0.510,"$persentase_maks": 0.520}},
+      {"53@progress.label_persen": {"$neko": "49","$persentase_min": 0.520,"$persentase_maks": 0.530}},
+      {"54@progress.label_persen": {"$neko": "48","$persentase_min": 0.530,"$persentase_maks": 0.540}},
+      {"55@progress.label_persen": {"$neko": "47","$persentase_min": 0.540,"$persentase_maks": 0.550}},
+      {"56@progress.label_persen": {"$neko": "46","$persentase_min": 0.550,"$persentase_maks": 0.560}},
+      {"57@progress.label_persen": {"$neko": "45","$persentase_min": 0.560,"$persentase_maks": 0.570}},
+      {"58@progress.label_persen": {"$neko": "44","$persentase_min": 0.570,"$persentase_maks": 0.580}},
+      {"59@progress.label_persen": {"$neko": "43","$persentase_min": 0.580,"$persentase_maks": 0.590}},
+      {"60@progress.label_persen": {"$neko": "42","$persentase_min": 0.590,"$persentase_maks": 0.600}},
+      {"61@progress.label_persen": {"$neko": "41","$persentase_min": 0.600,"$persentase_maks": 0.610}},
+      {"62@progress.label_persen": {"$neko": "40","$persentase_min": 0.610,"$persentase_maks": 0.620}},
+      {"63@progress.label_persen": {"$neko": "39","$persentase_min": 0.620,"$persentase_maks": 0.630}},
+      {"64@progress.label_persen": {"$neko": "38","$persentase_min": 0.630,"$persentase_maks": 0.640}},
+      {"65@progress.label_persen": {"$neko": "37","$persentase_min": 0.640,"$persentase_maks": 0.650}},
+      {"66@progress.label_persen": {"$neko": "36","$persentase_min": 0.650,"$persentase_maks": 0.660}},
+      {"67@progress.label_persen": {"$neko": "35","$persentase_min": 0.660,"$persentase_maks": 0.670}},
+      {"68@progress.label_persen": {"$neko": "34","$persentase_min": 0.670,"$persentase_maks": 0.680}},
+      {"69@progress.label_persen": {"$neko": "33","$persentase_min": 0.680,"$persentase_maks": 0.690}},
+      {"70@progress.label_persen": {"$neko": "32","$persentase_min": 0.690,"$persentase_maks": 0.700}},
+      {"71@progress.label_persen": {"$neko": "31","$persentase_min": 0.700,"$persentase_maks": 0.710}},
+      {"72@progress.label_persen": {"$neko": "30","$persentase_min": 0.710,"$persentase_maks": 0.720}},
+      {"73@progress.label_persen": {"$neko": "29","$persentase_min": 0.720,"$persentase_maks": 0.730}},
+      {"74@progress.label_persen": {"$neko": "28","$persentase_min": 0.730,"$persentase_maks": 0.740}},
+      {"75@progress.label_persen": {"$neko": "27","$persentase_min": 0.740,"$persentase_maks": 0.750}},
+      {"76@progress.label_persen": {"$neko": "26","$persentase_min": 0.750,"$persentase_maks": 0.760}},
+      {"77@progress.label_persen": {"$neko": "25","$persentase_min": 0.760,"$persentase_maks": 0.770}},
+      {"78@progress.label_persen": {"$neko": "24","$persentase_min": 0.770,"$persentase_maks": 0.780}},
+      {"79@progress.label_persen": {"$neko": "23","$persentase_min": 0.780,"$persentase_maks": 0.790}},
+      {"80@progress.label_persen": {"$neko": "22","$persentase_min": 0.790,"$persentase_maks": 0.800}},
+      {"81@progress.label_persen": {"$neko": "21","$persentase_min": 0.800,"$persentase_maks": 0.810}},
+      {"82@progress.label_persen": {"$neko": "20","$persentase_min": 0.810,"$persentase_maks": 0.820}},
+      {"83@progress.label_persen": {"$neko": "29","$persentase_min": 0.820,"$persentase_maks": 0.830}},
+      {"84@progress.label_persen": {"$neko": "28","$persentase_min": 0.830,"$persentase_maks": 0.840}},
+      {"85@progress.label_persen": {"$neko": "27","$persentase_min": 0.840,"$persentase_maks": 0.850}},
+      {"86@progress.label_persen": {"$neko": "26","$persentase_min": 0.850,"$persentase_maks": 0.860}},
+      {"87@progress.label_persen": {"$neko": "25","$persentase_min": 0.860,"$persentase_maks": 0.870}},
+      {"88@progress.label_persen": {"$neko": "24","$persentase_min": 0.870,"$persentase_maks": 0.880}},
+      {"89@progress.label_persen": {"$neko": "23","$persentase_min": 0.880,"$persentase_maks": 0.890}},
+      {"90@progress.label_persen": {"$neko": "22","$persentase_min": 0.890,"$persentase_maks": 0.900}},
+      {"91@progress.label_persen": {"$neko": "21","$persentase_min": 0.900,"$persentase_maks": 0.910}},
+      {"92@progress.label_persen": {"$neko": "20","$persentase_min": 0.910,"$persentase_maks": 0.920}},
+      {"93@progress.label_persen": {"$neko": "19","$persentase_min": 0.920,"$persentase_maks": 0.930}},
+      {"94@progress.label_persen": {"$neko": "18","$persentase_min": 0.930,"$persentase_maks": 0.940}},
+      {"95@progress.label_persen": {"$neko": "17","$persentase_min": 0.940,"$persentase_maks": 0.950}},
+      {"96@progress.label_persen": {"$neko": "16","$persentase_min": 0.950,"$persentase_maks": 0.960}},
+      {"97@progress.label_persen": {"$neko": "15","$persentase_min": 0.960,"$persentase_maks": 0.970}},
+      {"98@progress.label_persen": {"$neko": "14","$persentase_min": 0.970,"$persentase_maks": 0.980}},
+      {"99@progress.label_persen": {"$neko": "13","$persentase_min": 0.980,"$persentase_maks": 0.990}},
+      {"100@progress.label_persen": {"$neko": "12","$persentase_min": 0.990,"$persentase_maks": 0.991}},
+      {"101@progress.label_persen": {"$neko": "11","$persentase_min": 0.991,"$persentase_maks": 0.992}},
+      {"102@progress.label_persen": {"$neko": "10","$persentase_min": 0.992,"$persentase_maks": 0.993}},
+      {"103@progress.label_persen": {"$neko": "9","$persentase_min": 0.993,"$persentase_maks": 0.994}},
+      {"104@progress.label_persen": {"$neko": "8","$persentase_min": 0.994,"$persentase_maks": 0.995}},
+      {"105@progress.label_persen": {"$neko": "7","$persentase_min": 0.995,"$persentase_maks": 0.996}},
+      {"106@progress.label_persen": {"$neko": "6","$persentase_min": 0.996,"$persentase_maks": 0.997}},
+      {"107@progress.label_persen": {"$neko": "5","$persentase_min": 0.997,"$persentase_maks": 0.998}},
+      {"108@progress.label_persen": {"$neko": "4","$persentase_min": 0.998,"$persentase_maks": 0.999}},
+      {"109@progress.label_persen": {"$neko": "3","$persentase_min": 0.999,"$persentase_maks": 0.9995}},
+      {"110@progress.label_persen": {"$neko": "2","$persentase_min": 0.9995,"$persentase_maks": 0.99995}},
+      {"111@progress.label_persen": {"$neko": "1","$persentase_min": 0.99995,"persentase_maks": 1}},
+      {"112@progress.label_persen": {"$neko": "0","$persentase_min": 1,"$persentase_maks": 0}}
+    ]
+  },
+
+  "label_with_percentage": {
+    "type": "panel",
+    "anchor_from": "center", 
+    "anchor_to": "center",
+    "size": [ "100%", 30 ],
+    "controls": [
+      {
+        "stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "persen_panel@progress.persen_panel": {}
+            },
+            {
+              "label_panel": {
+                "type": "panel",
+                "size": [ "100%c", 30 ],
+                "controls": [
+                  {
+                    "percent_text": {
+                      "type": "label",
+                      "layer": 40,
+                      "alpha": "@zxyn.alpha_0",
+                      "anchor_from": "bottom_middle", 
+                      "anchor_to": "bottom_middle",
+                      "localize": false,
+                      "font_size": "large",
+                      "text": "%"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_progress_screen@progress_screen": {
+    "$screen_content": "progress.modal_screen_content"
+  },
+
+  "neko_progress_screen_text": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text_alignment": "center",
+    "max_size": [ "100%", "30px" ],
+    "font_scale_factor": "$ukuran_font",
+    "font_type": "$gaya_font"
+  },
+  
+  "neko_progress_title_text": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "progress_title": {
+          "size": [ "100%", "100%" ],
+          "type": "stack_panel",
+          "controls": [
+            {
+              "panel_loading": {
+                "type": "panel",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "loading_spin@progress.loading_spin": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ "100%" , 15 ]
+                    }
+                  }
+                ] 
+              }
+            },
+            {
+              "panel_label": {
+                "type": "panel",
+                "size": [ "100%", "45px" ],
+                "controls": [
+                  {
+                    "stack_panel_label": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%" ],
+                      "controls": [
+                        {
+                          "panel_label": {
+                            "type": "panel",
+                            "size": [ "100%", "100%c" ],
+                            "controls": [
+                              {
+                                "progress_title_text@progress.neko_progress_screen_text": {
+                                  "$ukuran_font": 1,
+                                  "$gaya_font": "EudoxusSans-Bold",
+                                  "text": "#title_text",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#title_text"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        { "spacer_2": { "type": "panel", "size": [ 3, 3 ]}},
+                        {
+                          "panel_label_2": {
+                            "type": "panel",
+                            "size": [ "100%", "100%c" ],
+                            "controls": [
+                              {
+                                "progress_bar_text@progress.neko_progress_screen_text": {
+                                  "$ukuran_font": 0.75,
+                                  "$gaya_font": "EudoxusSans-Medium",
+                                  "text": "#progress_text",
+                                  "bindings": [
+                                    { "binding_name": "#progress_text" }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "custom_label_progress": {
+    "type": "label",
+    "size": [ "100% - 80px", "20px"],
+    "text_alignment": "left",
+    "layer": 2,
+    "shadow": false
+  },
+
+
+  "judul_baru_new@neko_c.bg_3": {
+    "color": [ 0.04, 0.04, 0.04 ],
+    "alpha": 1,
+    "layer": 1,
+    "size": [ "100%", 50 ],
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left",
+    "controls": [
+      {
+        "core_": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "spacer_a": { "type": "panel", "size": [ 5, 5 ]}
+            },
+            {
+              "panel_loading": { "type": "panel","size": [ 32, "100%" ],"controls": [{ "loading_spin@progress.loading_spin": {"size": [ "100%" , "100%" ]}}]}},
+            {
+              "spacer_b": { "type": "panel", "size": [ 9, 9 ]}
+            },
+            {
+              "judul_stack_2": {
+                "size": [ "fill", "100%" ],
+                "type": "panel",
+                "controls": [
+                  {
+                    "judul_stack_uwu": {
+                      "type": "stack_panel",
+                      "controls": [
+                        {
+                          "label_panel": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"judul@progress.custom_label_progress": {"font_type": "EudoxusSans-Bold", "color": "white", "font_scale_factor": 0.9, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#title_text","bindings": [{"binding_name": "#title_text"}]}}]}
+                        },
+                        {
+                          "spacer_2": { "type": "panel", "size": [ 1.5, 1.5 ]}
+                        },
+                        {
+                          "label_panel_2": { "type": "panel", "size": [ "100%", "100%c" ], "controls": [{"deskripsi@progress.custom_label_progress": {"font_type": "EudoxusSans-Medium", "color": "white", "font_scale_factor": 0.65,  "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "default", "default" ],"text": "#progress_text","bindings": [{"binding_name": "#progress_text"}]}}]}
+                        },
+                        {
+                          "spacer_3": { "type": "panel", "size": [ 1.5, 1.5 ]}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer_c": { "type": "panel", "size": [ 5, 5 ]}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "fancy_progress_loading_bars": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", 2 ],
+    "layer": 5,
+    "controls": [
+      {
+        "full_progress_bar_icon@achievement.full_progress_bar_icon_base": {
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#loading_bar_percentage",
+              "binding_name_override": "#clip_ratio"
+            }
+          ]
+        }
+      },
+      {
+        "empty_progress_bar_icon@achievement.empty_progress_bar_icon": {
+          "layer": 1
+        }
+      },
+      {
+        "progress_bar_nub@progress.progress_bar_nub": {
+          "size": [ "100% - 10px", 5 ],
+          "layer": 4
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#loading_bar_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "uwu_button@common_buttons.light_text_button": {
+    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color|default": [ 0.07, 0.09, 0.13 ],
+    "$pressed_text_color|default": [ 0.09, 0.13, 0.17 ],
+    "$locked_text_color|default": [ 1.00, 0.11, 0.11 ],
+    "$hover_button_texture|default": "textures/neko/borderless/core/button_borderless_lighthover",
+    "$pressed_button_texture|default": "textures/neko/borderless/core/button_borderless_lightpressed",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, -5 ]
+  },
+
+  "tombol_batal_cuk@uwu_button": {
+    "$default_text_color|default": [ 1.00, 0.24, 0.26 ],
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.cancel",
+    "bindings": [
+      {
+        "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "retry_button@uwu_button": {
+    "$pressed_button_name": "button.menu_retry",
+    "$button_text": "gui.retry",
+    "bindings": [
+      {
+        "binding_name": "#retry_and_abort_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "abort_button@uwu_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.cancel",
+    "bindings": [
+      {
+        "binding_name": "#retry_and_abort_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "size": [ 80, 25 ],
+    "offset": [ 0 , 1.2 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "layer": 2,
+    "controls": [
+      {
+        "tombol_batal_cuk@progress.tombol_batal_cuk": {
+        }
+      }
+    ]
+  },
+
+  "modal_button_panel@progress.button_panel": {
+    "controls": [
+      {
+        "tombol_batal_cuk@progress.tombol_batal_cuk": {}
+      }
+    ]
+  },
+  
+  "modal_button_panel_with_retry@progress.modal_button_panel": {
+    "controls": [
+      {
+        "abort_button@progress.abort_button": {}
+      },
+      {
+        "tombol_batal_cuk@progress.tombol_batal_cuk": {}
+      },
+      {
+        "retry_button@progress.retry_button": {}
+      }
+    ]
+  },
+
+  "modal_progress_panel_no_cancel": {
+    "type": "panel",
+   "alpha": 0.85,
+    "size": [ "100%" , "100%" ],
+    "controls": [
+      {
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_4",
+          "$fill_alpha": "$background_fill_alpha",
+          "$show_close_button": false
+        }
+      },
+      {
+        "content": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          // magic offset to make the scroll clipping perfect
+          "size": [ "100%-12px", "100%-12px" ],
+          "offset": [ 0, 6 ],
+          "controls": [
+            {
+              "progress_title_text@progress.neko_progress_title_text": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_progress_panel_with_cancel": {
+    "type": "panel",
+    "alpha": 0.85,
+    "size": [ "100%" , "100%" ],
+    "controls": [
+      {
+        "content": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          // magic offset to make the scroll clipping perfect
+          "size": [ "100%-12px", "100% - 50px" ],
+          "offset": [ 0, 0 ],
+          "controls": [
+            {
+              "progress_title_text@progress.neko_progress_title_text": {}
+            }
+          ]
+        }
+      },
+      {
+        "modal_button_panel@progress.modal_button_panel": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      }
+    ]
+  },
+
+  "realms_loading_progress_screen@progress_screen": {
+    "$screen_content": "progress.progress_screen_content"
+  },
+
+  "world_modal_progress_panel_2": {
+  "type": "panel",
+  "size": [ "100%" , "100%" ],
+  "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$button_state_default_base": "common.button_state_default",
+        "$button_state_hover_base": "common.button_state_hover",
+        "$button_state_pressed_base": "common.button_state_pressed"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$button_state_default_base": "common-classic.button_state_default",
+        "$button_state_hover_base": "common-classic.button_state_hover",
+        "$button_state_pressed_base": "common-classic.button_state_pressed"
+      }
+    ],
+    "$neko_uwu_from|default": [ 0, "20%"],
+    "$neko_uwu_to|default": [ 0, 0 ],
+    "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          // magic offset to make the scroll clipping perfect
+          "size": [ "100%", "100%" ],
+
+          "controls": [
+            {
+              "progress_title_text@progress.judul_baru_new": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "inside_content_2": {
+          "type": "stack_panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ 70, "30px" ],
+          "controls": [
+            {
+              "vertical_padding": {
+                "type": "panel",
+                "size": [ 0, 5 ]
+              }
+            },
+            {
+              "top_right@progress.top_right": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": [ "100%", "100%" ]
+              }
+            },
+            {
+              "vertical_padding_2": {
+                "type": "panel",
+                "size": [ 0, 14 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "modal_button_panel@$modal_button_panel_type": {
+        }
+      }
+    ]
+  },
+
+  "world_convert_modal_progress_screen_content": {
+    "type": "panel",
+    "layer": 3,
+    "controls": [
+      {
+        "a@bgl_animations.bg_anim": {}
+      },
+      {
+        "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
+      },
+   {
+    "neko": {
+      "type": "panel",
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "size": [ "30%", 60 ],
+      "controls": [
+        {
+          "neko": {
+            "type": "stack_panel",
+            "orientation": "vertical",
+            "size": [ "100%", "100%" ],
+            "controls": [
+              { "label_with_percentage@progress.label_with_percentage": {}}
+            ]
+          }
+        }
+      ]
+    }
+   },
+      {
+        "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {
+          "$modal_button_panel_type": "progress.modal_button_panel"
+        }
+      },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "world_save_modal_progress_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {
+          "$modal_button_panel_type": "progress.modal_button_panel_with_retry"
+        }
+      },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "auto_save_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 9,
+    "frame_step": 18,
+    "fps": 5,
+    "reversible": true,
+    "easing": "linear"
+  },
+
+  "auto_save": {
+    "type": "image",
+    "layer": 33,
+    "texture": "textures/ui/auto_save",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 20 ],
+    "size": [ 18, 30 ],
+    "uv_size": [ 18, 30 ],
+    "uv": "@auto_save_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  
+  "loading_spin_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 16,
+    "frame_step": 32,
+    "fps": 20,
+    "reversible": false,
+    "easing": "linear"
+  },
+
+  "loading_spin": {
+    "type": "image",
+    "layer": 31,
+    "color": "white",
+    "texture": "zxyn-core/uwu/loading",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 0 ],
+    "size": [ 15, 5 ],
+    "uv_size": [ 15, 5 ],
+    "uv": "@loading_spin_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      {
+        "binding_name": "#loading_spin_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "progress_screen@common.base_screen": {
+    "force_render_below": "$force_render_below",
+    "$screen_bg_content": "bg_animations.alpha_bg",
+    "$screen_animations": [],
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "namespace": "persona",
+
+  "persona_screen@common.base_screen": {
+    "$safezone_screen_matrix_layer": 20,
+    "$ignore_inventory_button": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.controller_select", // controller_X
+        "to_button_id": "button.coin_wallet",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.try_exiting",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select_right", // controller_R3
+        "to_button_id": "button.preview_skin",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$screen_content": "persona.persona_screen_content",
+    "$header_safezone_control": "neko_c.bg_3",
+    "$header_bar_control": "neko_c.bg_3",
+    "$is_full_screen_layout": false,
+    "$ignore_swappers": false,
+
+    "$ignore_home_button": true,
+    "$ignore_search": true,
+
+    "$screen_bg_content": "bg_animations.nomoreanim"
+  }
+}

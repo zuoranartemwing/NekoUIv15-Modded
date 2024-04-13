@@ -1,0 +1,38 @@
+{
+  // Alphabetical order please :)
+	"ui_defs":[
+
+    "zxyn-core/neko_play_screen_common.json",  
+    "zxyn-core/mainui/zxyn_main_ui.json",
+    "zxyn-core/mainui/zxyn_main_ui_core.json",
+    
+    "zxyn-core/hud/zxyn_hud.json",
+    "zxyn-core/hud/main_hand_slot.json",
+
+    "zxyn-core/zxyn_loading_background.json",
+
+    // C u $ T o M J s O ? 1.0
+
+    "zxyn-core/neko_common.json",
+    "zxyn-core/neko_background.json",
+    "zxyn-core/zxyn_information.json",
+    "zxyn-core/neko_animation.json",
+    "zxyn-core/neko_toggle.json",
+
+    // Pengaturan
+    "zxyn-core/settings/neko_settings_common.json",
+    "zxyn-core/settings/neko_settings_section.json",
+    "zxyn-core/settings/neko_custom_radio_settings.json",
+
+    // Play_screen
+    "zxyn-core/neko_play_screen.json",
+    "zxyn-core/neko_template_tabs.json",
+    "zxyn-core/button_panel.json",
+    "zxyn-core/neko_button.json",
+    "zxyn-core/button.json",
+
+    // Pause
+    "zxyn-core/zxyn_pause_ui.json"
+
+  ]
+}

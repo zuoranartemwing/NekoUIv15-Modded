@@ -1,0 +1,178 @@
+{
+  "namespace": "death",
+
+  // Base button //
+
+  "a_button_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%c", 26 ],
+    "offset": [ 0, "-17.75%" ],
+    "controls": [
+      {
+        "gamepad_helper_a@common.gamepad_helper_a": {
+          "$icon_text_color": "$gamepad_button_generic_text_color",
+          "$icon_description_bind": "controller.buttonTip.select",
+          "$icon_description_bind_type": "none"
+        }
+      }
+    ]
+  },
+
+  // Screen //
+
+  "death_screen@common.base_screen": {
+    "$screen_content": "death.death_screen_content_2",
+    "$screen_bg_content": "death.background_gradient",
+    "load_screen_immediately": true
+  },
+
+  "panel_button": {
+    "type": "panel",
+    "size": [ "fill" , "100%" ]
+  },
+
+  "custom_button@zxyn.fxbutton4": {
+    "$icon_size": [ 30, 30 ],
+    "$button_type_panel": "x_button_panel.death_screen_button_panel"
+  }, 
+
+  "respawn@death.custom_button": {
+    "$icon_texture": "respawn_icon",
+    "$icon_line_texture": "respawn_icon_line_color",
+    "$pressed_button_name": "button.respawn_button",
+    "bindings": [
+      {
+        "binding_name": "#respawn_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#respawn_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "$button_text": "deathScreen.respawn",
+    "focus_identifier": "",
+    "layer": 1
+  },
+
+  "rage_quit@death.custom_button": {
+    "$button_text": "deathScreen.quit",
+    "$icon_texture": "exit_icon_death",
+    "$icon_line_texture": "exit_icon_color_line",
+    "$pressed_button_name": "button.main_menu_button",
+    "variables": [
+      {
+        "requires": "$is_secondary_client",
+        "$button_text": "deathScreen.quit.secondaryClient"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#quit_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#quit_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "focus_identifier": "",
+    "layer": 1
+  },
+  
+  "death_screen_content_2": {
+    "type": "panel",
+    "controls": [
+      {
+        "panel_death": {
+          "type": "panel",
+          "size": [ 200 , 110 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "stack": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%" ],
+                "orientation": "vertical",
+                "controls": [
+                  {
+                    "header_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c + 10px" ],
+                      "controls": [
+                        {
+                          "title_header": {
+                            "type": "label",
+                            "font_type": "EudoxusSans-Bold",
+                            "color": "white",
+                            "font_scale_factor": 1,
+                            "anchor_from": "middle_left",
+                            "anchor_to": "middle_left",
+                            "text_alignment": "left",
+                            "size": [ "100%", "default" ],
+                            "text": "KWOWKOWKOK MATI"
+                          }
+                        },
+                        {
+                          "death_reason_label": {
+                            "type": "label",
+                            "font_type": "EudoxusSans-Medium",
+                            "font_scale_factor": 0.86,
+                            "color": "$death_text_color",
+                            "text": "#death_reason_text",
+                            "max_size": [ "100%", "15px" ],
+                            "text_alignment": "center",
+                            "bindings": [
+                              {
+                                "binding_name": "#death_reason_text"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    } 
+                  },
+                  {
+                    "respawn_and_quit_button": {
+                      "size": [ "100%", "fill" ],
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "stack_2": {
+                            "type": "stack_panel",
+                            "size": [ "100%", "100%" ],
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "respawn@death.panel_button": { "controls": [ { "respawn@death.respawn": {}}]}
+                              },
+                              { "jarak": { "type": "panel", "size": [ 5, 5 ]}},
+                              {
+                                "quit@death.panel_button": { "controls": [ { "rage_quit@death.rage_quit": {}}]}
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_gradient": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [ 0.0, 0, 0, 0.37 ],
+    "color2": [ 1.00, 0.02, 0.00, 0.8 ],
+    "ignored": "$is_holographic"
+  }
+}

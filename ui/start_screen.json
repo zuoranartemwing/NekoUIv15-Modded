@@ -1,0 +1,200 @@
+﻿{
+  "namespace": "start",
+
+  "profile_button@common_buttons.light_text_form_fitting_button": {
+    "$pressed_button_name": "button.to_profile_screen",
+    "size": [ "100%c", 25 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$button_state_panel": "common_buttons.new_ui_width_fitting_button_panel",
+    "$button_text_size": [ "default", 10 ],
+    "$button_text": "profileScreen.header",
+    "$focus_id": "profile_button",
+    "$pressed_alpha": 0.65,
+    "$button_tts_header": "accessibility.start.profile",
+    "tts_index_order": 20
+  },
+
+  "skin_viewer_panel": {
+    "type": "input_panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, -6 ],
+    "gesture_tracking_button": "button.turn_doll",
+    "tts_ignore_count": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.turn_doll",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ],
+    "controls": [
+      {
+        "paper_doll_panel": {
+          "type": "panel",
+          "size": [ "100%", "100% - 10px" ],
+
+          "controls": [
+            {
+              "paper_doll": {
+                "type": "custom",
+                "renderer": "paper_doll_renderer",
+                "camera_tilt_degrees": 0,
+                "starting_rotation": 0,
+                "layer": 2,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "rotation": "gesture_x",
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, -15 ],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_delta_source",
+                    "target_property_name": "#gesture_delta_source"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_mouse_delta_x",
+                    "target_property_name": "#gesture_mouse_delta_x"
+                  },
+                  {
+                    "binding_name": "#is_appearance_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "appearacne_loading_panel@common_store.progress_loading": {
+                "$hide_failure_text": true,
+                "$hide_progress_loading_outline": true,
+                "$source_control_name": "paper_doll",
+                "$source_property_name": "(not #visible)"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+ 
+  //---------------------------------------------------------------------------
+  // Screens
+  //---------------------------------------------------------------------------
+
+  "bg": {
+    "type": "image",
+    "texture": "ui/neko/bg",
+    "fill": true,
+    "bilinear": true
+  },
+
+  "start_screen@common.base_screen": {
+    "$screen_bg_content": "bg_animations.bg_main",
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+      
+    ],
+    "$screen_content": "start.start_screen_content"
+  },
+
+  "new_offers_icon@start.new_offers_icon": {
+    "ignored": "$store_disabled",
+    "size": [ 35 , "100% - 10px" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "bindings": [
+      {
+       "binding_name": "#new_offers",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "start_screen_content": {
+    "type": "panel",
+    "$achievements_ignored|default": false,
+    "$feedback_ignored|default": false,
+    "$store_ignored|default": false,
+    "$is_toolbox_ignored|default": false,
+    "variables": [
+      {
+        "requires": "$education_edition",
+        "$achievements_ignored": true,
+        "$store_ignored|default": true
+      },
+      {
+        "requires": "$gear_vr",
+        "$feedback_ignored": true
+      },
+      {
+        "requires": "$fire_tv",
+        "$feedback_ignored": true
+      },
+      {
+        "requires": "$nx_os",
+        "$feedback_ignored": true
+      },
+      {
+        "requires": "(not $supports_xbl_achievements)",
+        "$achievements_ignored": true,
+        "$feedback_ignored": true
+      },
+      {
+        "requires": "(not $is_desktop or $is_publish)",
+        "$is_toolbox_ignored": true
+      }
+    ],
+    "controls": [
+      /* 
+      {
+        "zxyn_core_main_ui@zxyn_main_ui.zxyn_core_main_ui":{} //"semua_panel@uwu.semua_panel":{}
+      },
+      {
+        "top_panel@z_main.top_panel": {}
+      }  */
+     {
+        "zxyn_ui_never_die@zxyn_main_ui.zxyn_ui_never_die":{} //"semua_panel@uwu.semua_panel":{}
+      }
+    ]
+  }
+}

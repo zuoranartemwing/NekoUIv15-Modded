@@ -1,0 +1,57 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "smithing_table",
+
+  "quick_loot_smithing@crafting.han_button": {
+    "$default_button_texture|default": "textures/neko/borderless/core/button_borderless_lighthover",
+		"$button_content": "crafting.quick_craft_icon",
+		"property_bag": {
+			"#collection_name": "smithing_table_result_items", 
+			"#collection_index": 0
+		},
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.container_auto_place",
+				"mapping_type": "pressed"
+			}
+		]
+	},
+
+  "smithing_table_panel/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tombol_extra@crafting.tombol_extra": { 
+          "$enable_drop_one": true, 
+          "$enable_drop_one_stack": true,
+          "$enable_normal_inventory": true, 
+          "$enable_destroy_item": false, 
+          "$enable_quick_loot_smithing": true, 
+          "$enable_quick_loot": false,
+          "$enable_quick_crafting": false,
+          "$enable_quick_loot_furnace": false,
+          "$enable_quick_loot_anvil": false 
+          }
+        }
+      }
+    ]
+  },
+
+  "smithing_table_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+      }
+    ]
+  }
+}
+
+// #endregion

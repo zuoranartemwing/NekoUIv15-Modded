@@ -1,0 +1,93 @@
+
+// (c) Mojang. All rights reserved
+// (c) Microsoft. All rights reserved.
+// Custom code created By Farhan ( ZXYN ) (c)NekoUI
+// jangan nyolong ya :D, dan kamu tidak di izinkan untuk menggunakan code UI tanpa izin !
+
+{
+  "namespace": "enchanting",
+
+  "enchanting_panel/root_panel/enchanting_screen_inventory": {
+    "modifications": [
+
+
+      /// MOVING ITEM
+
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": {"hotbar_normal@crafting.hotbar_normal": {}}
+      },
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": {"hotbar_mod@crafting.hotbar_mod": {}}
+      },
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": {"inventory_panel_bottom_half_label_mod@crafting.inventory_panel_bottom_half_label_mod": {}}
+      },
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": {"inventory_panel_bottom_half_label@crafting.inventory_panel_bottom_half_label": {}}
+      },
+
+      //// DROP ITEM
+
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": { "inventory_panel_bottom_half_with_label_drop_stack@chest.inventory_panel_bottom_half_with_label_drop_stack": {} }
+      }, 
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": { "inventory_panel_bottom_half_with_label_drop_one@chest.inventory_panel_bottom_half_with_label_drop_one": {} }
+      }, 
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": { "hotbar_drop_stack@chest.hotbar_drop_stack": {} }
+      },
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": { "hotbar_drop_one@chest.hotbar_drop_one": {} }
+      },
+      
+      {
+        "array_name": "controls", 
+        "operation": "insert_back", 
+        "value": { "normal_4@chest.inventory_panel_bottom_half_with_label_none": {} }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tombol_extra@crafting.tombol_extra": { 
+          "$enable_drop_one": true, 
+          "$enable_drop_one_stack": true,
+          "$enable_normal_inventory": true, 
+          "$enable_destroy_item": false, 
+          "$enable_quick_loot_smithing": false, 
+          "$enable_quick_loot": true,
+          "$enable_quick_crafting": false,
+          "$enable_quick_loot_furnace": false,
+          "$enable_quick_loot_anvil": false 
+          }
+        }
+      }
+    ]
+  },
+
+  "enchanting_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+      }
+    ]
+  }
+}

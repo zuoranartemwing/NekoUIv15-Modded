@@ -1,0 +1,254 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "settings",
+
+  "toggle_background@neko_c.bg_r2": {
+    "color": [ 0.0, 0.0, 0.0 ],
+    "alpha": 0.75
+  },
+
+  "selector_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "vertical",
+    "$ukuran_jarak": [ 3, 3 ],
+    "$default_selector_toggle_index": 5555,
+    "ttsSectionContainer": true,
+    "controls": [
+      {// Di ambil dari common file // neko_common.json
+        "90@neko_c.settings_title": { 
+          "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
+          "$neko_c.s_text": "Settings"
+        }
+      },
+      { "spacer_banana": { "type": "panel", "size": "$ukuran_jarak","ignored": "(not $include_controls_and_settings_sections or not $is_pregame)"}},
+      {
+        "quick_panel@settings.toggle_background": {
+          "ignored": "(not $include_controls_and_settings_sections)",
+          "size": [ "100% - 3px", "100%c" ],
+          "controls": [
+              {
+                "general_and_account_stack": {
+                  "type": "stack_panel",
+                  "size": [ "100%", "100%c" ],
+                  "orientation": "vertical",
+                  "controls": [
+                    {
+                      "quick_settings@custom_settings_section.quick_settings": {
+                        "$toggle_group_forced_index": 5555
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+      },
+      {
+        "world_selector_pane@world_section.selector_pane_content": {
+          "ignored": "(not $include_world_section)"
+        }
+      },
+      { "spacer0": { "type": "panel", "size": "$ukuran_jarak","ignored": "(not $include_controls_and_settings_sections or not $is_pregame)"}},
+      {
+        "graphics_panel@settings.toggle_background": {
+          "ignored": "(not $include_controls_and_settings_sections)",
+          "size": [ "100% - 3px", "100%c" ],
+          "controls": [
+              {
+                "general_and_account_stack": {
+                  "type": "stack_panel",
+                  "size": [ "100%", "100%c" ],
+                  "orientation": "vertical",
+                  "controls": [
+                    {
+                      "graphic_button@custom_settings_section.graphic_button": {
+                        "$toggle_group_forced_index": 3000
+                      }
+                    },
+                    {
+                      "gameplay_button@custom_settings_section.gameplay_button": {
+                        "$toggle_group_forced_index": 2000
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+      },
+      { "spacer01": { "type": "panel", "size": "$ukuran_jarak", "ignored": "(not $include_controls_and_settings_sections )" }},
+        //////////// CONTROLS SETTINGS
+      {
+          "controls_panel@settings.toggle_background": {
+            "ignored": "(not $include_controls_and_settings_sections)",
+            "size": [ "100% - 3px", "100%c" ],
+            "controls": [
+                {
+                  "general_and_account_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "orientation": "vertical",
+                    "controls": [
+                      {
+                        "keyboard_and_mouse_button@controls_section.keyboard_and_mouse_button": {
+                          "ignored": "(not $keyboard_and_mouse_supported)",
+                          "$toggle_group_forced_index": "$keyboard_and_mouse_forced_index",
+                          "$tts_section_header": "$controls_section_header"
+                      }
+                    },
+                      {
+                        "controller_button@controls_section.controller_button": {
+                          "ignored": "(not $gamepad_supported or $nx_os)",
+                          "$toggle_group_forced_index": "$controller_and_switch_forced_index",
+                          "$tts_section_header": "$controls_section_header"
+                      }
+                    },
+                      {
+                        "switch_controller_button@controls_section.controller_button": {
+                          "ignored": "(not $gamepad_supported or not $nx_os)",
+                          "$toggle_group_forced_index": "$controller_and_switch_forced_index",
+                          "$glyph_texture": "textures/ui/controller_glyph_switch",
+                          "$glyph_color_texture": "textures/ui/controller_glyph_color_switch",
+                          "$tts_section_header": "$controls_section_header"
+                       }
+                     },
+                        { 
+                          "touch_button@controls_section.touch_button": {
+                              "ignored": "($is_holographic or not $touch_supported or $nx_os)",
+                              "$toggle_group_forced_index": "$touch_forced_index",
+                              "$tts_section_header": "$controls_section_header"
+                            }
+                          }
+                    ]
+                  }
+                }
+              ]
+            }
+          }, 
+          { "spacer1": { "type": "panel", "size": "$ukuran_jarak", "ignored": "(not $include_controls_and_settings_sections)" }},
+        //////////// MORE SETTINGS 
+        {
+          "graphics_panel_2@settings.toggle_background": {
+            "ignored": "(not $include_controls_and_settings_sections)",
+            "size": [ "100% - 3px", "100%c" ],
+            "controls": [
+                {
+                  "general_and_account_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "orientation": "vertical",
+                    "controls": [
+                      {
+                        "more_settings_button@custom_settings_section.more_settings_button": {
+                          "size": [ "100% - 3px", 25 ],
+                          "$toggle_group_forced_index": 80
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+        },
+        { "spacer3": { "type": "panel", "size": "$ukuran_jarak", "ignored": "(not $include_controls_and_settings_sections)" }},
+        { "more@custom_settings_section.more": { "visible": false }},
+        { "spacer43": { "type": "panel", "size": "$ukuran_jarak", "ignored": "(not $include_controls_and_settings_sections)" }},
+        // the list of selection toggle buttons, add yours here...
+        {
+          "world_settings@settings.toggle_background": {
+            "size": [ "100% - 3px", "100%c" ],
+            "controls": [
+                {
+                  "world_settings": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "orientation": "vertical",
+                    "controls": [
+                      {
+                        "selector_group_label_11@settings_common.selector_group_label": {
+                          "$warna": [ 0.0 , 0.0 , 0.0] ,
+                          "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
+                          "$yuki": "yuki.resource_packs.text"
+                        }
+                      },
+                      {
+                        "global_texture_pack_button@general_section.global_texture_pack_button": {
+                          "ignored": "(not $include_controls_and_settings_sections or not $is_pregame)",
+                          "$toggle_group_forced_index": "$global_texture_pack_forced_index",
+                          "visible": "($is_global_texture_packs_visible)",
+                          "$tts_section_header": "$general_section_header"
+                        }
+                      },
+                      {
+                        "addons_selector_panel@world_section.addons_selector_panel": {
+                          "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
+                          "$level_texture_pack_toggle_index": "$level_texture_pack_index",
+                          "$addon_toggle_index": "$addon_index"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+        },
+      {
+        "realm_selector_pane@realms_settings.selector_panel": {
+          "ignored": "(not $include_realm_section)",
+          "$world_toggle_index": "$world_forced_index",
+          "$members_toggle_index": "$members_forced_index",
+          "$subscription_toggle_index": "$subscription_forced_index",
+          "$backup_toggle_index": "$backup_forced_index",
+          "$dev_options_toggle_index": "$dev_options_forced_index"
+        }
+      },
+      { "spacer44": { "type": "panel", "size": "$ukuran_jarak", "ignored": "(not $include_controls_and_settings_sections)" }}
+    ]
+  },
+
+  "section_content_panels/world_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "experimental_section@world_section.experimental_section": {} },
+          { "curang_section@world_section.curang_section": {} },
+          { "opsi_dunia_section@world_section.opsi_dunia_section": {} }
+        ]
+      }
+    ]
+  },
+
+  "section_content_panels/general_and_controls_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "general_and_account@general_section.general_and_account": { "visible": false }},
+          { "quick_settings_section@custom_settings_section.quick_settings_section": { "visible": false }},
+          { "graphic_section@custom_settings_section.graphic_section": { "visible": false }},
+          { "gameplay_section@custom_settings_section.gameplay_section": { "visible": true }},
+          { "about_section@custom_settings_section.about_section": { "visible": false }}
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "where": { "general_tab_section@general_section.general_tab_section": { "visible": false } }
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "where": { "account_section@general_section.account_section": { "visible": false } }
+      }
+    ]
+  }
+}

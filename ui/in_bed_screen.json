@@ -1,0 +1,136 @@
+{
+  "namespace": "bed",
+
+  // Screen //
+
+  "in_bed_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      }
+    ],
+
+    "$screen_content": "bed.in_bed_screen_neko",
+    "$screen_bg_content": "bed.background_gradient"
+  },
+
+
+  "chat_neko@death.custom_button": {
+    "$icon_texture": "open_chat",
+    "$icon_line_texture": "open_chat_line_color",
+    "$button_text": "multiplayer.inBedOpenChat",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.chat",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.chat",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "wake_up_neko@death.custom_button": {
+    "$icon_texture": "exit_icon_death",
+    "$icon_line_texture": "exit_icon_color_line",
+    "$button_text": "multiplayer.stopSleeping",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+
+  "in_bed_screen_neko": {
+    "type": "panel",
+    "controls": [
+      {
+        "wake_up_label_panel": {
+          "type": "label",
+          "size": [ "default", 49 ],
+          "font_type": "EudoxusSans-Bold",
+          "font_scale_factor": 0.86,
+          "offset": [ 0, "3.5%" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#wake_up_label_panel",
+          "color": "$main_header_text_color",
+          "bindings": [
+            {
+              "binding_name": "#wake_up_label_panel"
+            }
+          ]
+        }
+      },
+      {
+        "in_bed_screen_neko": {
+          "type": "panel",
+          "size": [ 200 , 100 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "stack": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%" ],
+                "orientation": "vertical",
+                "controls": [
+                  {
+                    "respawn_and_quit_button": {
+                      "size": [ "100%", "100%" ],
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "stack_2": {
+                            "type": "stack_panel",
+                            "size": [ "100%", "100%" ],
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "wake_up@death.panel_button": { "controls": [ { "wake_up_neko@bed.wake_up_neko": {}}]}
+                              },
+                              { "jarak": { "type": "panel", "size": [ 5, 5 ]}},
+                              {
+                                "chat@death.panel_button": { "controls": [ { "chat_neko@bed.chat_neko": {}}]}
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_gradient": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [ 0.0, 0, 0, 0.2 ],
+    "color2": [ 1.0, 1.0, 1.0, 0.3 ],
+    "ignored": "$is_holographic"
+  }
+}

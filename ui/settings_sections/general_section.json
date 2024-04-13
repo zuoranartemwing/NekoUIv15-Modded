@@ -1,0 +1,346 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "general_section",
+
+  "core_icon": {
+    "type": "image",
+    "size": [ 18, 18 ]
+  },
+
+  "accesibility_icon@core_icon": {
+    "texture": "textures/neko/glyph_icon/accessibility_glyph_color"
+  },
+
+  "general_and_account": {
+    "type": "stack_panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "general_and_account_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "account_section@general_section.account_section": {} },
+      { "general_tab_section@general_section.general_tab_section": {} }
+    ]
+  },
+  
+  "account_uwu@settings_common.section_toggle_base": {
+    "$default_texture": "textures/neko/borderless/core/button_borderless_dark",
+    "$button_type_panel": "loli.nametag_panel_2",
+    "$toggle_view_binding_name": "general_and_account_toggle",
+    "$button_text": "options.general",
+    "$toggle_property_bag": {
+      "#panel_title": "options.generalTitle"
+    }
+  },
+
+  // GENERAL button & section
+  "general_button@settings_common.section_toggle_base_2": {
+    "$default_texture": "textures/neko/borderless/core/button_borderless_dark",
+    "$toggle_view_binding_name": "general_and_account_toggle",
+    "$button_content": "general_section.general_icon",
+    "$button_content_size": [ 18, 18 ],
+    "$button_text": "options.general",
+    "$toggle_property_bag": {
+      "#panel_title": "options.generalTitle"
+    }
+  },
+
+  "general_tab_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.general_tab_section",
+              "$icon": "general_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+  "accessibility_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.accessibility_section",
+              "$icon": "accessibility_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "account_button@settings_common.section_toggle_base_2": {
+    "size": [ "100%", "45px" ],
+    "$toggle_view_binding_name": "account_button_toggle",
+    "$button_content": "general_section.account_icon",
+    "$button_content_size": [ 18, 18 ],
+    "$button_text": "options.account",
+    "$toggle_property_bag": {
+      "#panel_title": "options.accountTitle"
+    }
+  },
+
+  "account_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.account_section",
+              "$icon": "profile_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  //Global Texture Pack button & section
+  "global_texture_pack_button@resource_packs.resource_packs_section_toggle_base": {
+    "$toggle_view_binding_name": "global_texture_pack_button_toggle",
+    "$cycling_icon_path": "#cycling_icon_path_global",
+    "$cycling_icon_zip": "#cycling_icon_zip_global",
+    "$cycling_icon_file_system": "#cycling_icon_file_system_global",
+    "$button_text": "menu.globalpacks",
+    "$toggle_property_bag": {
+      "#panel_title": "menu.globalpacks"
+    }
+  },
+
+  "global_texture_pack_section@resource_packs.selected_stack_panel": {
+    "$selected_pack_items": "#selected_pack_items_global",
+    "$available_pack_items": "#available_pack_items_global",
+    "$realms_pack_items": "#realms_pack_items_global",
+    "$unowned_pack_items": "#unowned_pack_items_global",
+    "$selected_grid_dimensions": "#selected_grid_dimensions_global",
+    "$available_grid_dimensions": "#available_grid_dimensions_global",
+    "$realms_grid_dimensions": "#realms_grid_dimensions_global",
+    "$unowned_grid_dimensions": "#unowned_grid_dimensions_global",
+    "$unowned_visible": "#unowned_visible_global",
+    "$button.selected_pack": "button.selected_pack_global",
+    "$button.deselected_pack": "button.deselected_pack_global",
+    "$button.available_pack": "button.available_pack_global",
+    "$button.realms_pack": "button.realms_pack_global",
+    "$button.unowned_pack": "button.unowned_pack_global",
+    "$button.move_left": "button.move_left_global",
+    "$button.sort_up": "button.sort_up_global",
+    "$button.sort_down": "button.sort_down_global",
+    "$button.expand_selected": "button.expand_selected_global",
+    "$button.expand_available": "button.expand_available_global",
+    "$button.expand_realms": "button.expand_realms_global",
+    "$button.expand_unowned": "button.expand_unowned_global",
+    "$button.store": "button.store_global",
+    "$button.read_toggle": "button.read_toggle_global",
+    "$button.report_errors": "button.report_errors_global",
+    "$bottom_description_text": "resourcePack.description.bottom.global",
+    "$selected_label_text": "resourcePack.selected.title.packs",
+    "$available_label_text": "resourcePack.available.title.packs",
+    "$realms_label_text": "resourcePack.realmsPlus.title.packs",
+    "$unowned_label_text": "resourcePack.suggestedContent.title",
+    "$platform_locked": "#platform_locked_global",
+    "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
+    "$default_item_texture": "#default_item_texture_global",
+    "$default_item_file_system": "#default_item_file_system_global",
+    "$default_item_zip": "#default_item_zip_global",
+    "$default_item_title": "resourcePack.vanilla.name",
+    "$default_item_description": "resourcePack.vanilla.description",
+    "$no_packs_text": "resourcePack.available.none.text",
+    "$read_more_label": "read_more_label_global",
+    "$read_less_label": "read_less_label_global",
+    "$total_size_binding": "#total_size_binding_global",
+    "$in_game_error_text": "resourcePack.error.ingame.packs",
+    "$invalid_pack_items": "#invalid_pack_items_global",
+    "$invalid_grid_dimensions": "#invalid_grid_dimensions_global",
+    "$button.invalid_pack": "button.invalid_pack_global",
+    "$button.pack_warning": "button.pack_warning_global",
+    "$invalid_label_text": "resourcePack.invalid.title.packs",
+    "$view_in_store": "resourcePack.description.store",
+    "$errors_text": "resourcePack.errors",
+    "$warnings_text": "resourcePack.warnings",
+    "$expired_text": "resourcePack.realmsPlus.expired",
+    "$top_label_box": false,
+    "$show_checkbox": false,
+    "$button.resource_pack_options_exit": "button.resource_pack_options_exit_global",
+    "$button.pack_settings": "button.pack_settings_global",
+    "$button.add": "resourcePack.available.add",
+    "$button.remove": "resourcePack.selected.remove",
+    "$options_slider_name": "content_tier_slider_global",
+    "$display_suggested_content_offers": true,
+    "$suggested_content_offers_collection": "#suggested_offers_collection_global",
+    "$suggested_content_offers_loading_binding": "#suggested_offers_loading_global",
+    "$button.more_suggested_content_offers": "button.more_suggested_content_offers_global",
+    "$button.select_offer": "button.select_offer_global",
+    "$suggested_content_offers_label_text": "#suggested_offers_title_global",
+    "$no_available_packs_visibility_binding": "#no_available_packs_visibility_global",
+    "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_global",
+    "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_global",
+    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_global",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "global_texture_pack_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //Storage management button & section
+  "storage_management_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "storage_management_button_toggle",
+    "enabled": "(not $trial)",
+    "visible": "($is_pregame and not $education_edition_china)",
+    "$button_text": "menu.storageManagement",
+    "$glyph_texture": "textures/neko/glyph_icon/storageIcon",
+    "$glyph_color_texture": "textures/neko/glyph_icon/storageIconColor",
+    "$glyph_uv": [ 0, 0 ],
+    "$glyph_size": [ 18, 18 ],
+    "$toggle_property_bag": {
+      "#panel_title": "menu.storageManagement"
+    }
+  },
+
+  // CREATOR button & section
+
+  "creator_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "creator_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/creator_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/creator_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.creator",
+    "$toggle_property_bag": {
+      "#panel_title": "options.creatorTitle"
+    }
+  },
+
+  "creator_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.creator.text",
+              "$icon": "creator_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  // VIDEO button & section
+
+  "video_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "video_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/video_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/video_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.video",
+    "$toggle_property_bag": {
+      "#panel_title": "options.videoTitle"
+    }
+  },
+
+  "advanced_video_options_toggle@settings_common.option_toggle_control": {
+    "$toggle_name": "advanced_video_options",
+    "$toggle_state_binding_name": "#advanced_video_options"
+  },
+
+
+  "view_subscriptions_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "view_subscriptions_button_toggle",
+    "enabled": "(not $trial)",
+    "$glyph_texture": "textures/neko/glyph_icon/subscription_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/subscription_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.viewSubscriptions",
+    "$toggle_property_bag": {
+      "#panel_title": "options.viewSubscriptions"
+    }
+  },
+
+  // Music and Sound button & section
+
+  "sound_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "sound_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/sound_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/sound_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.sounds",
+    "$toggle_property_bag": {
+      "#panel_title": "options.sounds.title"
+    }
+  },
+
+  "sound_section": {
+    "$spatialPatternsPadding": [ "100%", 23.5 ],
+    "$audioSlidersSize": [ "100% - 5px", 16 ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.audio.text",
+              "$icon": "sound_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  // LANGUAGE button & section
+
+  "language_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "language_button_toggle",
+    "$glyph_texture": "textures/neko/glyph_icon/language_glyph",
+    "$glyph_color_texture": "textures/neko/glyph_icon/language_glyph_color",
+    "$glyph_size": [ 18, 18 ],
+    "$button_text": "options.language",
+    "$toggle_property_bag": {
+      "#panel_title": "options.language"
+    }
+  },
+
+  "language_section": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "title_text@neko_c.title_text": {
+              "$neko_c.title.text": "settings.header.language.text",
+              "$icon": "language_glyph_color"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

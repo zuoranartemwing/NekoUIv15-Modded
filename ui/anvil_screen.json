@@ -1,0 +1,56 @@
+// (c) Mojang. All rights reserved
+// (c) Microsoft. All rights reserved.
+// Custom code created By Farhan ( ZXYN ) (c)NekoUI
+// jangan nyolong ya :D, dan kamu tidak di izinkan untuk menggunakan code UI tanpa izin !
+
+{
+  "namespace": "anvil",
+
+
+  "quick_loot_anvil@crafting.han_button": {
+    "$default_button_texture|default": "textures/neko/borderless/core/button_borderless_lighthover",
+		"$button_content": "crafting.quick_craft_icon",
+		"property_bag": {
+			"#collection_name": "anvil_result_items", 
+			"#collection_index": 0
+		},
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.anvil_take_all_place_all",
+				"mapping_type": "pressed"
+			}
+		]
+	},
+
+  "anvil_panel/root_panel/anvil_screen_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tombol_extra@crafting.tombol_extra": { 
+          "$enable_drop_one": true, 
+          "$enable_drop_one_stack": true,
+          "$enable_normal_inventory": true, 
+          "$enable_destroy_item": false, 
+          "$enable_quick_loot_smithing": false, 
+          "$enable_quick_loot": false,
+          "$enable_quick_crafting": false,
+          "$enable_quick_loot_furnace": false,
+          "$enable_quick_loot_anvil": false 
+          }
+        }
+      }
+    ]
+  },
+  
+  "anvil_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+      }
+    ]
+  }
+}

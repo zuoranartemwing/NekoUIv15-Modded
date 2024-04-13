@@ -1,0 +1,58 @@
+{
+  "namespace": "sidebar_navigation",
+
+  
+  "sidebar_bg": {
+    "type": "image",
+    "alpha": 0,
+    "texture": "textures/ui/white_background",
+    "$sidebar_bg_color|default": "$sidebar_bg_color",
+    "color": [ 0.05, 0.07, 0.10 ],
+    "fill": true,
+    "keep_ratio": false
+  },
+
+  "sidebar_toggle@common_toggles.dark_content_toggle": {
+    "$sidebar_toggle_size|default": [ "100%", 23 ],
+    "size": "$sidebar_toggle_size",
+    "$toggle_name|default": "toggle.sidebar_option_selection",
+
+    "$default_focus_precedence": -10,
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_content": "sidebar_navigation.toggle_content",
+    "$button_content_size": [ "100%", "100%" ],
+
+    "$unchecked_locked_texture": "",
+    "$checked_locked_texture": "",
+    "$default_texture": "",
+    "$hover_texture": "textures/ui/white_background",
+    "$pressed_texture": "textures/ui/White",
+    "$pressed_no_hover_texture": "textures/ui/White",
+
+    "$default_texture_color": [ 0.05, 0.07, 0.10 ],
+    "$default_checked_texture_color": [ 0.05, 0.07, 0.10 ],
+    "$hover_texture_color": [ 0.50, 0.82, 1.00 ],
+    "$hover_checked_texture_color": [ 0.57, 0.74, 1.00 ],
+    "$hover_border_visible": false,
+    "$default_border_visible": false,
+
+    "$button_image_fill": true,
+    "$enable_hover_event_mapping": true,
+    "$toggle_hover_event_mapping": "button.dropdown_nav_toggle_on_hover",
+    "$toggle_parent_collection_details": "collection_details",
+    "$toggle_parent_collection_details_name": "$sidebar_section_collection_name",
+    "$toggle_parent_collection_details_prefix": "$sidebar_section_collection_prefix",
+    "$pressed_button_name": "toggle.sidebar_option_selection"
+  },
+
+  "sidebar_divider": {
+    "type": "image",
+    "size": [ "100%", 1 ],
+    "alpha": 0,
+    "layer": 3,
+    "texture": "textures/neko/bg/bg_white",
+    "color": [ 0.11, 0.15, 0.20 ],
+    "fill": true,
+    "keep_ratio": false
+  }
+}

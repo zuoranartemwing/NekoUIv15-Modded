@@ -1,0 +1,599 @@
+// (c) Mojang. All rights reserved
+// (c) Microsoft. All rights reserved.
+// Custom code created By Farhan ( ZXYN ) (c)NekoUI
+// jangan nyolong ya :D, dan kamu tidak di izinkan untuk menggunakan code UI tanpa izin !
+
+{
+  "namespace": "chest",
+
+
+  /// TEST 2
+
+  "drop_one_test@common.container_item": {
+    "$button_ref": "common.drop_one",
+    "$item_collection_name": "container_items"
+  },
+
+  "drop_stack_test@common.container_item": {
+    "$button_ref": "common.drop_all",
+    "$item_collection_name": "container_items"
+  },
+
+  "small_chest_grid_drop_one": {
+    "type": "grid",
+    "size": [ 162, 54 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 3 ],
+    "grid_item_template": "chest.drop_one_test",
+    "collection_name": "container_items"
+  },
+
+  "small_chest_grid_drop_stack": {
+    "type": "grid",
+    "size": [ 162, 108 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 6 ],
+    "grid_item_template": "chest.drop_stack_test",
+    "collection_name": "container_items"
+  },
+  
+
+  /////////////////////////////////
+
+  "chest_grid_item_mod@common.container_item": {
+    "$button_ref": "common.letakkan_otomatis",
+    "$item_collection_name": "container_items"
+  },
+
+  "small_chest_grid_mod": {
+    "type": "grid",
+    "size": [ 162, 54 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 3 ],
+    "grid_item_template": "chest.chest_grid_item_mod",
+    "collection_name": "container_items"
+  },
+
+  "large_chest_grid_mod": {
+    "type": "grid",
+    "size": [ 162, 108 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 6 ],
+    "grid_item_template": "chest.chest_grid_item_mod",
+    "collection_name": "container_items"
+  },
+
+  //// #endregion
+
+  ////---------------------------------------------------------------------------
+  //// #region chest area
+  ////---------------------------------------------------------------------------
+
+  "small_chest_panel_top_half": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "yaemiko",
+            "source_property_name": "( not #toggle_state )",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+
+  "small_chest_panel_top_half_mod": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 12 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "yaemiko",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "small_chest_grid@chest.small_chest_grid_mod": {
+          "offset": [ 7, 9 ]
+        }
+      }
+    ]
+  },
+
+  "large_chest_panel_top_half": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "yaemiko",
+            "source_property_name": "( not #toggle_state )",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+
+  "large_chest_panel_top_half_mod": {
+    "type": "panel",
+    "size": [ "100%", 132 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "yaemiko",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "large_chest_grid@chest.large_chest_grid_mod": {
+          "offset": [ 7, 10 ]
+        }
+      }
+    ]
+  },
+
+  "icon": {
+    "type": "image",
+    "size": [ 14, 14 ]
+  },
+
+  "quick_loot_icon_down@icon": {
+    "texture": "textures/neko/main_icon/quick_loot_ico_down"
+  },
+
+  "drop_one_ico@icon": {
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/drop_1x"
+  },
+
+  "drop_stack_ico@icon": {
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/drop_64x"
+  },
+
+
+  /// Toggle
+
+  "core_toggle@test_toggle.yaemiko": {
+    "size": [ 25, 25],
+    
+    "$toggle_group_default_selected": "$apa_coba",
+    "$radio_toggle_group": true,
+    "$toggle_name": "navigation_tab",
+    "$button_text_default": "","$button_text_hover": "","$button_text_pressed": ""
+  },
+
+    "normal_inven@chest.core_toggle": {
+      "$icon_texture": "textures/ui-x/icon-new/normalinven",
+      "$icon_size": [ 18, 18 ],
+      "$toggle_view_binding_name": "venti"
+    },
+
+    "quick_loot@chest.core_toggle": {
+      "$icon_texture": "textures/ui-x/icon-new/auto_loot",
+      "$icon_size": [ 19, 19 ],
+      "$toggle_view_binding_name": "yaemiko"
+    },
+
+    "drop_one@chest.core_toggle": {
+      "$icon_size": [ 19, 19 ],
+      "$icon_texture": "textures/ui-x/icon-new/drop_1x",
+      "$toggle_view_binding_name": "kyaru"
+    },
+
+    "drop_one_stack@chest.core_toggle": {
+      "$icon_size": [ 19, 19 ],
+      "$icon_texture": "textures/ui-x/icon-new/drop_64x",
+      "$toggle_view_binding_name": "kororo"
+    },
+
+
+    // Quick drop 64 1 Delete
+    "small_chest_panel": {
+      "modifications": [
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+        }
+      ]
+    },
+
+    "large_chest_panel": {
+      "modifications": [
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": { "armor_and_heart_render@crafting.armor_and_heart_render": {}}
+        }
+      ]
+    },
+    
+    "small_chest_panel/root_panel/chest_panel": {
+      "modifications": [
+        // Untuk Cell Chest
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": { "tombol_extra@crafting.tombol_extra": { 
+            "$enable_quick_move_inventory": false, 
+            "$enable_quick_loot": true,
+            "$enable_quick_crafting": false,
+            "$enable_quick_loot_furnace": false,
+            "$enable_quick_loot_anvil": false,
+            "$enable_quick_loot_smithing": false,
+            "$enable_destroy_item": false
+            }
+          }
+        },
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal_1@chest.small_chest_panel_top_half": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "small_chest_panel_top_half_mod@chest.small_chest_panel_top_half_mod": {} }
+        },
+        // Untuk Cell Inventory ( Di atas hotbar)
+        
+        
+        // DROP ITEM
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_drop_stack@chest.inventory_panel_bottom_half_with_label_drop_stack": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_drop_one@chest.inventory_panel_bottom_half_with_label_drop_one": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_drop_stack@chest.hotbar_drop_stack": {} }
+        },
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_drop_one@chest.hotbar_drop_one": {} }
+        },
+        
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal_4@chest.inventory_panel_bottom_half_with_label_none": {} }
+        }, 
+
+
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_mod@chest.inventory_panel_bottom_half_with_label_mod": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal@chest.inventory_panel_bottom_half_with_label": {} }
+        }, 
+
+        // Untuk Hotbar
+        {
+          "array_name": "controls", 
+          "operation": "remove", 
+          "where": { "hotbar_grid@common.hotbar_grid_template": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_grid_quick_loot_off@chest.hotbar_normal": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_grid_quick_loot_on@chest.hotbar_mod": {} }
+        }
+      ]
+    }, 
+
+    "large_chest_panel/root_panel/chest_panel": {
+        "modifications": [
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": { "tombol_extra@crafting.tombol_extra": { 
+            "$enable_quick_loot": true,
+            "$enable_quick_move_inventory": false, 
+            "$enable_quick_crafting": false,
+            "$enable_quick_loot_furnace": false,
+            "$enable_quick_loot_anvil": false,
+            "$enable_quick_loot_smithing": false,
+            "$enable_destroy_item": false
+            }
+          }
+        },
+        // Untuk Cell Chest
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal_2@chest.large_chest_panel_top_half": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "large_chest_panel_top_half_mod@chest.large_chest_panel_top_half_mod": {} }
+        },
+        // Untuk Cell Inventory ( Di atas hotbar)
+
+
+        // TEST 2
+        // DROP ITEM
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_drop_stack@chest.inventory_panel_bottom_half_with_label_drop_stack": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_drop_one@chest.inventory_panel_bottom_half_with_label_drop_one": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_drop_stack@chest.hotbar_drop_stack": {} }
+        },
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_drop_one@chest.hotbar_drop_one": {} }
+        },
+        
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal_4@chest.inventory_panel_bottom_half_with_label_none": {} }
+        }, 
+
+
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "inventory_panel_bottom_half_with_label_mod@chest.inventory_panel_bottom_half_with_label_mod": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "normal_4a@chest.inventory_panel_bottom_half_with_label": {} }
+        }, 
+
+        // Untuk Hotbar
+        {
+          "array_name": "controls", 
+          "operation": "remove", 
+          "where": { "hotbar_grid@common.hotbar_grid_template": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_grid_quick_loot_off@chest.hotbar_normal": {} }
+        }, 
+        {
+          "array_name": "controls", 
+          "operation": "insert_back", 
+          "value": { "hotbar_grid_quick_loot_on@chest.hotbar_mod": {} }
+        }
+      ]
+    }, 
+
+    /// DROP ONE
+
+    "inventory_panel_bottom_half_with_label_drop_one@common.inventory_panel_bottom_half_mod": {
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "size": [ "100%", 93 ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "kyaru",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        { "inventory_drop_one@common.inventory_drop_one": {} },
+        {
+          "inventory_label@common.section_heading_label": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 7, 3 ],
+            "layer": 2,
+            "text": "§fInventory [§bDROP ONE§f]"
+          }
+        }
+      ]
+    },
+
+    "hotbar_drop_one@common.hotbar_grid_template": {
+      "$button_ref": "common.drop_one", 
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "kyaru",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }, 
+    
+    /// DROP ONE STACK
+
+    "inventory_panel_bottom_half_with_label_drop_stack@common.inventory_panel_bottom_half_mod": {
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "size": [ "100%", 93 ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "kororo",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        { "inventory_panel_drop_stack@common.inventory_panel_drop_stack": {} },
+        {
+          "inventory_label@common.section_heading_label": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 7, 3 ],
+            "layer": 2,
+            "text": "§fInventory [§bDROP ONE STACK§f]"
+          }
+        }
+      ]
+    },
+
+    "hotbar_drop_stack@common.hotbar_grid_template": {
+      "$button_ref": "common.drop_stack", 
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "kororo",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }, 
+        
+    "hotbar_drop_normal@common.hotbar_grid_template": {
+      "$button_ref": "common.container_slot_button_prototype", 
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "venti",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    },
+
+    /// NORMAL NO DROP :v
+
+    "inventory_panel_bottom_half_with_label_none@common.inventory_panel_bottom_half": {
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "size": [ "100%", 93 ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "venti",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        { "inventory_panel@common.inventory_panel": {} },
+        {
+          "inventory_label@common.section_heading_label": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 7, 3 ],
+            "layer": 2,
+            "text": "§fInventory [§aNORMAL§f]"
+          }
+        }
+      ]
+    },
+
+    // UNTUK CHEST  ( AUTO PLACE )
+    "inventory_panel_bottom_half_with_label_mod@common.inventory_panel_bottom_half_mod": {
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "size": [ "100%", 93 ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "yaemiko",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        { "inventory_panel_mod@common.inventory_panel_mod":  {} },
+        {
+          "inventory_label@common.section_heading_label": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 7, 3 ],
+            "layer": 2,
+            "text": "§fInventory [§bQUICK PLACE & LOOT§f]"
+          }
+        }
+      ]
+    },
+
+    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": {
+      "modifications": [
+        {
+          "array_name": "bindings",
+          "operation": "insert_back",
+          "value": {
+            "binding_type": "view",
+            "source_control_name": "yaemiko",
+            "source_property_name": "(not #toggle_state )",
+            "target_property_name": "#visible"
+          }
+        }
+      ]
+    },
+        
+    "hotbar_mod@common.hotbar_grid_template": {
+      "$button_ref": "common.letakkan_otomatis", 
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "yaemiko",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }, 
+        
+    "hotbar_normal@common.hotbar_grid_template": {
+      "$button_ref": "common.container_slot_button_prototype", 
+      "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "yaemiko",
+        "source_property_name": "(not #toggle_state )",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

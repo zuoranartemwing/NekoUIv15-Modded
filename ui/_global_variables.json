@@ -1,0 +1,279 @@
+{
+
+  //////////////hapus kode di bawah ini, jika hasil modifikasi kamu tidak mmerlukan warna kustom
+  
+    // IDK
+
+    "$header_color": [ 0.10, 0.10, 0.10 ], // default [ 1.0, 1.0, 1.0 ]
+
+    // DIALOG
+    "$dialog_line_and_background_color": [ 1.0, 1.0, 1.0  ], // default [ 1.0, 1.0, 1.0 ]
+
+    // INVENTORY, CHEST, FURNACE, ETC...
+    "$recipe_book_bg_color": [ 0.11, 0.14, 0.16 ], // default: [ 0.11, 0.14, 0.16 ], 
+
+    // SETTINGS
+    
+    "$scroll_color":[ 1.0, 1.0, 1.0 ], // default [ 1.0, 1.0, 1.0 ]
+    "$scroll_rail":[ 1.0, 1.0, 1.0 ], // default [ 1.0, 1.0, 1.0 ]
+
+    "$toggle_on_default_color":[ 1.0, 1.0, 1.0 ], // default [ 1.0, 1.0, 1.0 ]
+    "$toggle_on_hover_color":[ 1.0, 1.0, 1.0 ], // default [ 1.0, 1.0, 1.0 ]
+
+    "$slider_background_color": [ 1.0, 1.0, 1.0  ], // default [ 1.0, 1.0, 1.0 ]
+    "$slider_background_color_hover":[ 1.0, 1.0, 1.0 ], // default [ 1.0, 1.0, 1.0 ]
+    
+  /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    //// Main UI
+
+    "$main_ui_icon_color_default": [ 1.0, 1.0, 1.0 ],
+    "$main_ui_icon_color_hover": [ 0.17, 0.17, 0.17 ],
+    "$main_ui_icon_color_pressed": [ 0.17, 0.17, 0.17 ],
+    "$main_ui_icon_color_locked": [],
+
+   "$core_neko_default":[ 0.16, 0.17, 0.22 ],
+   "$core_neko_hover": [ 0.19, 0.20, 0.26 ],
+   "$core_neko_pressed":[ 0.19, 0.20, 0.26 ],
+   "$core_neko_locked":[ 1.00, 0.00, 0.00 ],
+
+    //// DRESSING ROOM
+    "$dressing_room_dark_button_color": [ 1.00, 1.00, 0.90 ],
+
+
+    // Untuk Dropdown
+    "$toggle_dropdown_text_default": [ 1.0, 1.0, 1.0 ],
+    "$toggle_dropdown_text_hover": [ 1.00, 1.00, 1.00 ],
+    "$toggle_dropdown_text_pressed": [ 1.00, 1.00, 1.00 ],
+    "$toggle_dropdown_text_pressed_and_hover": [ 1.00, 1.00, 1.00 ],
+
+    // Untuk section toggle
+    "$light_toggle_default": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_hover": [ 0.11, 0.13, 0.18 ],
+    "$light_toggle_pressed_default": [ 0.11, 0.13, 0.18 ],
+    "$light_toggle_pressed_and_hover": [ 0.11, 0.13, 0.18 ],
+
+    "$dark_button_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_button_hover_text_color": [ 0.70, 0.89, 1.00  ],
+    "$dark_button_pressed_text_color": [ 0.70, 0.89, 1.00 ],
+    "$dark_button_locked_text_color": [ 1.00, 0.24, 0.26 ],
+    //////// Text colors ////////
+
+    "$warna_default": [ 1.0, 1.0, 1.0 ],
+    "$warna_dihover": [ 0.63, 0.91, 1.00 ],
+    "$warna_ditekan": [ 0.96, 0.94, 0.52 ],
+    "$warna_ditekan_dan_hover": [ 0.80, 0.95, 1.00 ],
+    "$dikunci": [ 1.00, 0.00, 0.00 ],
+
+    "$warna_icon_default": [ 0.0, 0.0, 0.0 ],
+    "$warna_icon_saatdihover": [ 0.00, 0.95, 1.00 ],
+    "$warna_icon_saatditekan": [ 1.0, 1.0, 1.0  ],
+    "$warna_icon_saatdikunci": [ 1.00, 0.11, 0.11 ],
+
+    "$generic_button_text_color": [ 1.0, 1.0, 1.0 ], // for those times you find a button that's kind of used but shouldn't...
+  
+    "$light_button_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_button_hover_text_color": [ 0.11, 0.12, 0.16],
+    "$light_button_pressed_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_button_locked_text_color": [ 0.53, 0.53, 0.53 ],
+
+    // Toggle yang mempunyai Primary dan Secondary Text
+  
+    "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_hover_text_color": [ 1.0, 1.0, 1.0  ],
+    "$light_toggle_checked_default_text_color": [ 0.29, 0.78, 0.990 ],
+    "$light_toggle_checked_hover_text_color": [ 0.29, 0.78, 0.99 ],
+  
+    "$light_button_secondary_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_button_secondary_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_button_secondary_pressed_text_color": [ 0.29, 0.78, 0.99 ],
+    "$light_button_secondary_locked_text_color": [ 0.29, 0.78, 0.99 ],
+
+    "$dark_toggle_default_text_color": [ 1.0, 1.0, 1.0  ],
+    "$dark_toggle_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_toggle_checked_default_text_color": [ 0.29, 0.78, 0.99 ],
+    "$dark_toggle_checked_hover_text_color": [ 0.29, 0.78, 0.99 ],
+
+    "$dark_button_secondary_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_button_secondary_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_button_secondary_pressed_text_color": [ 0.29, 0.78, 0.99 ],
+    "$dark_button_secondary_locked_text_color": [ 0.29, 0.78, 0.99 ],
+
+    
+    /* ------------------------------------------------------------------ */
+  
+  
+    "$title_text_color": [ 1.0, 1.0, 1.0 ],
+    "$pocket_title_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$main_header_text_color": [ 1.0, 1.0, 1.0 ],
+    "$sub_header_text_color": [ 1.0, 1.0, 1.0 ],
+
+    //// Bagian Tab /////////////
+  
+    "$tab_unchecked_text_color": [ 1.0, 1.0, 1.0 ],
+    "$tab_unchecked_hover_text_color": [ 1.0, 1.0, 1.0 ],
+
+    "$tab_unchecked_locked_text_color": [ 1.00, 0.24, 0.26 ],
+    "$tab_unchecked_locked_hover_text_color": [ 1.00, 0.36, 0.38 ],
+    
+    "$tab_checked_text_color": [ 0.70, 0.89, 1.00 ],
+    "$tab_checked_hover_text_color": [ 0.70, 0.89, 1.00 ],
+
+    "$tab_checked_locked_text_color": [ 1.00, 0.24, 0.26 ],
+    "$tab_checked_locked_hover_text_color": [ 1.00, 0.36, 0.38 ],
+  
+    "$tab_secondary_unchecked_text_color": [ 1.0, 1.0, 1.0 ],
+    "$tab_secondary_unchecked_hover_text_color": [ 1.0, 1.0, 1.0],
+
+    "$tab_secondary_unchecked_locked_text_color": [ 1.00, 0.24, 0.26 ],
+    "$tab_secondary_unchecked_locked_hover_text_color": [ 1.00, 0.36, 0.38 ],
+
+    "$tab_secondary_checked_text_color": [ 0.70, 0.89, 1.00 ],
+    "$tab_secondary_checked_hover_text_color": [ 0.70, 0.89, 1.00 ],
+
+    "$tab_secondary_checked_locked_text_color": [ 1.00, 0.24, 0.26 ],
+    "$tab_secondary_checked_locked_hover_text_color": [ 1.00, 0.36, 0.38 ],
+
+    ////////////////////////
+  
+    "$tab_unchecked_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_unchecked_hover_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_unchecked_locked_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_unchecked_locked_hover_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_checked_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_checked_hover_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_checked_locked_glyph_color": [ 0.3, 0.3, 0.3 ],
+    "$tab_checked_locked_hover_glyph_color": [ 0.3, 0.3, 0.3 ],
+  
+    "$item_stack_count_color": [ 1.0, 1.0, 1.0 ],
+    "$selected_item_stack_count_color": [ 1.0, 1.0, 0.0 ],
+  
+    "$item_hover_text_color": [ 1.0, 1.0, 1.0 ], // Color of hover text gets overwrritten by text color format codes, so this is just for not failing unit tests
+  
+    "$pocket_item_details_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$tool_tip_text": [ 1.0, 1.0, 1.0 ],
+  
+    "$text_box_text_color": [ 1.0, 1.0, 1.0 ],
+    "$text_box_locked_text_color": [ 1.0, 1.0, 1.0 ],
+    "$place_holder_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$title_command_text_color": [ 1.0, 1.0, 1.0 ],
+    "$subtitle_command_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$boss_name_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$body_text_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_body_text_color": [ 0.3, 0.3, 0.3 ],
+  
+    "$dark_grid_item_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_grid_item_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$enchanting_runes_color": [ 0.54, 0.37, 0.36 ],
+    "$enchanting_runes_fail_color": [ 0.408, 0.368, 0.29 ],
+  
+    "$enchanting_cost_success_color": [ 0.5, 1, 0.125 ],
+    "$enchanting_cost_fail_color": [ 0.54, 0.37, 0.36 ],
+  
+    "$beacon_power_title_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$anvil_cost_success_text_color": [ 0.5, 1, 0.125 ],
+    "$anvil_cost_fail_text_color": [ 0.3, 0.3, 0.3 ],
+  
+    "$gamepad_button_generic_text_color": [ 1.0, 1.0, 1.0 ],
+    "$gamepad_a_button_text_color": [ 0.0, 1.0, 0.0 ],
+    "$gamepad_b_button_text_color": [ 1.0, 0.0, 0.0 ],
+    "$gamepad_x_button_text_color": [ 0.0, 0.0, 1.0 ],
+    "$gamepad_y_button_text_color": [ 1.0, 1.0, 0.0 ],
+    "$gamepad_description_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$keyboard_helper_keys": [ 1.0, 1.0, 0.0 ],
+    "$achievement_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$xbl_signin_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$toast_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$chat_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$hud_gamertag_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$realms_text_color": [ 0.57, 0.29, 0.67 ],
+  
+    "$death_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$loading_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$experience_text_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$feed_text_color": [ 0.0, 0.0, 0.0 ],
+  
+    "$warning_text_color": [ 0.8, 0.7, 0.0 ],
+    "$error_text_color": [ 1.0, 0.0, 0.0 ],
+  
+    "$alert_label_text_color": [ 0.0, 0.0, 0.0 ],
+  
+    "$debug_store_text_color": [ 0.0, 1.0, 0.0 ],
+  
+    "$x_axis_text_color": [ 1.0, 0.0, 0.0 ],
+    "$y_axis_text_color": [ 0.0, 1.0, 0.0 ],
+    "$z_axis_text_color": [ 0.0, 0.6392, 1.0 ],
+  
+    "$book_page_number_color": [ 0.74, 0.64, 0.53 ],
+    "$book_page_text_color": [ 0.0, 0.0, 0.0 ],
+    "$book_title_color": [ 1.0, 1.0, 1.0 ],
+    "$book_title_placeholder_color": [ 0.667, 0.667, 0.667 ],
+    "$book_title_label_color": [ 1.0, 1.0, 1.0 ],
+    "$book_author_color": [ 1.0, 1.0, 1.0 ],
+    "$book_author_label_color": [ 0.667, 0.667, 0.667 ],
+    "$book_warning_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$npc_dialog_text_color": [ 0.0, 0.0, 0.0 ],
+    "$npc_url_text_color": [ 0.0, 0.0, 1.0 ],
+  
+    "$wtc_pack_desc_text_color": [ 0.75, 0.75, 0.75 ],
+  
+    //////// Glyph colors ////////
+    "$light_glyph_default_color": [ 0.3, 0.3, 0.3 ],
+    "$light_glyph_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$light_glyph_pressed_color": [ 1.0, 1.0, 1.0 ],
+    "$light_glyph_locked_color": [ 0.7, 0.7, 0.7 ],
+  
+    "$light_glyph_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+    "$light_glyph_toggle_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$light_glyph_toggle_checked_default_color": [ 0.0, 0.0, 0.0 ],
+    "$light_glyph_toggle_checked_hover_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$dark_glyph_default_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_glyph_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_glyph_pressed_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_glyph_locked_color": [ 0.7, 0.7, 0.7 ],
+  
+    "$dark_glyph_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+    "$dark_glyph_toggle_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_glyph_toggle_checked_default_color": [ 0.0, 0.0, 0.0 ],
+    "$dark_glyph_toggle_checked_hover_color": [ 1.0, 1.0, 1.0 ],
+  
+    //////// Border colors ////////
+    "$light_border_default_color": [ 0.0, 0.0, 0.0 ],
+    "$light_border_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$light_border_pressed_color": [ 1.0, 1.0, 1.0 ],
+    "$light_border_locked_color": [ 1.00, 0.00, 0.00 ],
+  
+    "$light_border_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+    "$light_border_toggle_hover_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$dark_border_default_color": [ 0.05, 0.05, 0.10 ],
+    "$dark_border_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$dark_border_pressed_color": [ 0.88, 0.98, 1.00 ],
+    "$dark_border_locked_color": [ 1.00, 0.16, 0.16 ],
+  
+    "$dark_border_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+    "$dark_border_toggle_hover_color": [ 1.0, 1.0, 1.0 ],
+  
+    "$non_interact_border_color": [ 0.7, 0.7, 0.7 ]
+  }
+  
+  
